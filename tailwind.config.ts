@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss";
+import defaultTheme from "tailwindcss/defaultTheme";
 
 const config: Config = {
   content: [
@@ -8,9 +9,10 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+      fontFamily: {
+        sans: ["Inter Variable", ...defaultTheme.fontFamily.sans],
+        italic: ["Inter Variable Italic", ...defaultTheme.fontFamily.sans],
+        mono: ["JetBrains Mono Regular", ...defaultTheme.fontFamily.mono],
       },
     },
   },
