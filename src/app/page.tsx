@@ -1,4 +1,10 @@
+import hljs from "highlight.js/lib/common";
+
 export default function Home() {
+  const code = hljs.highlight('print("You rock!")', {
+    language: "python",
+  }).value;
+
   return (
     <div className="mx-auto w-1/3 bg-neutral-900/75 text-white">
       <div className="p-2">
@@ -9,7 +15,10 @@ export default function Home() {
         </p>
         <div className="rounded-md border border-slate-600 bg-slate-800">
           <pre>
-            <code>print(&quot;You rock!&quot;)</code>
+            <code
+              className="language-python m-1"
+              dangerouslySetInnerHTML={{ __html: code }}
+            />
           </pre>
         </div>
       </div>
