@@ -1,6 +1,6 @@
-import type { Metadata } from "next";
 import "./globals.css";
-import "highlight.js/styles/default.min.css";
+import "highlight.js/styles/github-dark-dimmed.min.css";
+import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Create Next App",
