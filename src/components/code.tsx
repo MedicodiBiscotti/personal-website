@@ -8,7 +8,7 @@ type CodeProps = {
 
 function Code({ code, language }: CodeProps) {
   return (
-    <pre className="my-2 rounded-md bg-black/50 px-4 py-3">
+    <pre className="my-2 rounded-md bg-slate-800 px-4 py-3 dark:bg-black/50">
       <code
         className={`hljs language-${language} text-sm`}
         dangerouslySetInnerHTML={{
