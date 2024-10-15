@@ -1,5 +1,6 @@
+// sort-imports-ignore
 import "./globals.css";
-import "highlight.js/styles/github-dark-dimmed.min.css";
+import "./highlight-themes.css";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
