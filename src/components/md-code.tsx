@@ -19,7 +19,7 @@ async function MdCode() {
     .process(fs.readFileSync(post, "utf-8"));
   return (
     <div
-      className="prose prose-invert"
+      className="prose prose-invert prose-em:font-italic prose-em:not-italic"
       dangerouslySetInnerHTML={{ __html: file.value }}
     />
   );
