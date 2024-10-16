@@ -1,5 +1,7 @@
 import typography from "@tailwindcss/typography";
 import type { Config } from "tailwindcss";
+import heropatternsPlugin from "tailwindcss-hero-patterns";
+import heropatterns from "tailwindcss-hero-patterns/src/patterns";
 import defaultTheme from "tailwindcss/defaultTheme";
 
 const config: Config = {
@@ -9,6 +11,12 @@ const config: Config = {
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
+    heroPatterns: {
+      topography: heropatterns.topography,
+    },
+    heroPatternsShades: ["200", "900"],
+    heroPatternsColors: ["pink"],
+    heroPatternsOpacities: ["25"],
     extend: {
       fontFamily: {
         sans: ["Inter Variable", ...defaultTheme.fontFamily.sans],
@@ -17,6 +25,6 @@ const config: Config = {
       },
     },
   },
-  plugins: [typography],
+  plugins: [typography, heropatternsPlugin],
 };
 export default config;

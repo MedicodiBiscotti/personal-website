@@ -15,7 +15,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body className="bg-neutral-100 heropattern-topography-pink-900/25 dark:bg-neutral-900 dark:heropattern-topography-pink-200/25">
+        {children}
+      </body>
     </html>
   );
 }
