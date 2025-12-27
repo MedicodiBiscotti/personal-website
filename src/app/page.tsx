@@ -3,24 +3,22 @@ import MdCode from "@/components/md-code";
 
 export default function Home() {
   return (
-    <div className="mx-auto w-1/3 bg-neutral-100/75 dark:bg-neutral-900/75 dark:text-white">
-      <div className="p-2">
-        <h1 className="mb-2 text-6xl font-thin">Hello world</h1>
-        <p className="my-2">
-          Welcome to my <span className="font-italic">super awesome</span>{" "}
-          website!
-        </p>
+    <>
+      <h1 className="mb-2 text-6xl font-thin">Hello world</h1>
+      <p className="my-2">
+        Welcome to my <span className="font-italic">super awesome</span>{" "}
+        website!
+      </p>
 
-        <Code
-          language="python"
-          code={`
+      <Code
+        language="python"
+        code={`
             def main():
               print("You rock!")
           `}
-        />
+      />
 
-        <MdCode />
-      </div>
-    </div>
+      <MdCode />
+    </>
   );
 }

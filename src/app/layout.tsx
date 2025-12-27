@@ -16,7 +16,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="bg-neutral-100 heropattern-topography-pink-900/25 dark:bg-neutral-900 dark:heropattern-topography-pink-200/25">
-        {children}
+        <div className="mx-auto w-1/3 bg-neutral-100/75 dark:bg-neutral-900/75 dark:text-white">
+          <main className="p-2">{children}</main>
+        </div>
       </body>
     </html>
   );
