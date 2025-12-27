@@ -1,3 +1,9 @@
+---
+title: Examples from Markdown
+slug: examples
+created: 2024-10-15
+---
+
 # Examples from Markdown
 
 Some `inline` code too.
