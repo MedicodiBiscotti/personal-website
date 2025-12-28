@@ -1,4 +1,3 @@
-import fs from "fs";
 import type { Metadata } from "next";
 import { join } from "path";
 import { cache } from "react";
@@ -11,12 +10,13 @@ import rehypeStringify from "rehype-stringify";
 import remarkFrontmatter from "remark-frontmatter";
 import remarkParse from "remark-parse";
 import remarkRehype from "remark-rehype";
+import { read } from "to-vfile";
 import { unified } from "unified";
 import { matter } from "vfile-matter";
 
 // getPost will be used twice, but execute only once
-export const getPost = cache(async () => {
-  const post = join(process.cwd(), "_posts", "code-example.md");
+const getPost = cache(async () => {
+  const path = join("_posts", "code-example.md");
   const file = await unified()
     .use(remarkParse)
     .use(remarkFrontmatter)
@@ -32,7 +32,7 @@ export const getPost = cache(async () => {
     .use(rehypeAutolinkHeadings, { behavior: "wrap" })
     .use(rehypeInferReadingTimeMeta)
     .use(rehypeStringify)
-    .process(fs.readFileSync(post, "utf-8"));
+    .process(await read(path));
   return file;
 });
 
@@ -48,7 +48,7 @@ async function MdCode() {
   const file = await getPost();
 
   return (
-    <div
+    <article
       className="prose dark:prose-invert prose-em:font-italic prose-em:not-italic"
       dangerouslySetInnerHTML={{ __html: file.value }}
     />
