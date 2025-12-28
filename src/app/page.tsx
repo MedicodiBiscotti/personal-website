@@ -1,5 +1,4 @@
 import Code from "@/components/code";
-import MdCode from "@/components/md-code";
 
 export default function Home() {
   return (
@@ -17,8 +16,6 @@ export default function Home() {
               print("You rock!")
           `}
       />
-
-      <MdCode />
     </>
   );
 }
