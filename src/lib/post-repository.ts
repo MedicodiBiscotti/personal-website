@@ -10,9 +10,9 @@ import rehypeStringify from "rehype-stringify";
 import remarkFrontmatter from "remark-frontmatter";
 import remarkParse from "remark-parse";
 import remarkRehype from "remark-rehype";
-import remarkStringify from "remark-stringify";
 import { read } from "to-vfile";
 import { unified } from "unified";
+import { VFile } from "vfile";
 import { matter } from "vfile-matter";
 
 /*
@@ -24,25 +24,18 @@ import { matter } from "vfile-matter";
 
 const postsDirectory = "_posts";
 
-// Cached because it's called twice in the page, once for content and once for metadata.
-export const getPostBySlug = cache(async (slug: string) => {
+export async function getPostBySlug(slug: string) {
   const path = join(postsDirectory, `${slug}.md`);
   return await getPost(path);
-});
-
-// Cached because it could be called multiple times if using strategy 2.
-export const getAllPosts = cache(async () => {
-  const posts = await fs.readdir(postsDirectory);
-  return await Promise.all(posts.map((path) => getPost(path)));
-});
-
-export async function getAllPostMeta() {
-  const posts = await fs.readdir(postsDirectory);
-  return await Promise.all(posts.map((path) => getPostMeta(path)));
 }
 
-// Could be cached instead of the other functions.
-async function getPost(path: string) {
+export async function getAllPosts(): Promise<VFile[]> {
+  const posts = await fs.readdir(postsDirectory);
+  return await Promise.all(posts.map((path) => getPost(path)));
+}
+
+// Cached because it's called multiple times. Twice on the page, once for content and once for metadata. And to get all posts for overview and metadata.
+export const getPost = cache(async (path: string): Promise<VFile> => {
   return await unified()
     .use(remarkParse)
     .use(remarkFrontmatter)
@@ -59,18 +52,4 @@ async function getPost(path: string) {
     .use(rehypeInferReadingTimeMeta)
     .use(rehypeStringify)
     .process(await read(path));
-}
-
-// No need for HTML processing here.
-async function getPostMeta(path: string) {
-  return await unified()
-    .use(remarkParse)
-    .use(remarkFrontmatter)
-    .use(function () {
-      return function (_, file) {
-        matter(file);
-      };
-    })
-    .use(remarkStringify)
-    .process(await read(path));
-}
+});

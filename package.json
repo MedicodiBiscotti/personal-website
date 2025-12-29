@@ -23,7 +23,6 @@
     "remark-frontmatter": "^5.0.0",
     "remark-parse": "^11.0.0",
     "remark-rehype": "^11.1.2",
-    "remark-stringify": "^11.0.0",
     "tailwindcss-hero-patterns": "^0.1.2",
     "to-vfile": "^8.0.0",
     "unified": "^11.0.5",
