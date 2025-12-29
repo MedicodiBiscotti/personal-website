@@ -24,13 +24,14 @@ import { matter } from "vfile-matter";
 
 const postsDirectory = "_posts";
 
-export async function getPostBySlug(slug: string) {
+export async function getPostBySlug(slug: string): Promise<VFile> {
   const path = join(postsDirectory, `${slug}.md`);
   return await getPost(path);
 }
 
 export async function getAllPosts(): Promise<VFile[]> {
-  const posts = await fs.readdir(postsDirectory);
+  let posts = await fs.readdir(postsDirectory);
+  posts = posts.map((post) => join(postsDirectory, post));
   return await Promise.all(posts.map((path) => getPost(path)));
 }
 
