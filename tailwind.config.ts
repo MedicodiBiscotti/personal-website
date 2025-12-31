@@ -1,6 +1,8 @@
 import typography from "@tailwindcss/typography";
 import type { Config } from "tailwindcss";
+// @ts-ignore
 import heropatternsPlugin from "tailwindcss-hero-patterns";
+// @ts-ignore
 import heropatterns from "tailwindcss-hero-patterns/src/patterns";
 import defaultTheme from "tailwindcss/defaultTheme";
 

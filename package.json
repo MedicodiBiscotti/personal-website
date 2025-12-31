@@ -1,6 +1,7 @@
 {
   "name": "personal-website",
   "version": "0.1.0",
+  "type": "module",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -26,6 +27,7 @@
     "tailwindcss-hero-patterns": "^0.1.2",
     "to-vfile": "^8.0.0",
     "unified": "^11.0.5",
+    "vfile": "^6.0.3",
     "vfile-matter": "^5.0.1"
   },
   "devDependencies": {

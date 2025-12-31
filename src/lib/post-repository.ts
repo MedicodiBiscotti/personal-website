@@ -30,9 +30,26 @@ export async function getPostBySlug(slug: string): Promise<VFile> {
 }
 
 export async function getAllPosts(): Promise<VFile[]> {
-  let posts = await fs.readdir(postsDirectory);
-  posts = posts.map((post) => join(postsDirectory, post));
-  return await Promise.all(posts.map((path) => getPost(path)));
+  const posts = await getAllPostFilenames();
+  const paths = posts.map((post) => join(postsDirectory, post));
+  return await Promise.all(paths.map((path) => getPost(path)));
+}
+
+export async function getAllPostSlugs(): Promise<string[]> {
+  // By metadata or files in the folder? Depends on how posts are fetched.
+
+  // Metadata
+  // const posts = await getAllPosts();
+  // // @ts-ignore it's not undefined
+  // return posts.map((post) => post.data.matter?.slug);
+
+  // Filename
+  const posts = await getAllPostFilenames();
+  return posts.map((post) => post.replace(/\.mdx?$/, ""));
+}
+
+export async function getAllPostFilenames(): Promise<string[]> {
+  return await fs.readdir(postsDirectory);
 }
 
 // Cached because it's called multiple times. Twice on the page, once for content and once for metadata. And to get all posts for overview and metadata.
