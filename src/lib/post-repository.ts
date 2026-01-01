@@ -26,13 +26,13 @@ const postsDirectory = "_posts";
 
 export async function getPostBySlug(slug: string): Promise<VFile> {
   const path = join(postsDirectory, `${slug}.md`);
-  return await getPost(path);
+  return getPost(path);
 }
 
 export async function getAllPosts(): Promise<VFile[]> {
   const posts = await getAllPostFilenames();
   const paths = posts.map((post) => join(postsDirectory, post));
-  return await Promise.all(paths.map((path) => getPost(path)));
+  return Promise.all(paths.map((path) => getPost(path)));
 }
 
 export async function getAllPostSlugs(): Promise<string[]> {
@@ -48,13 +48,13 @@ export async function getAllPostSlugs(): Promise<string[]> {
   return posts.map((post) => post.replace(/\.mdx?$/, ""));
 }
 
-export async function getAllPostFilenames(): Promise<string[]> {
-  return await fs.readdir(postsDirectory);
+export function getAllPostFilenames(): Promise<string[]> {
+  return fs.readdir(postsDirectory);
 }
 
 // Cached because it's called multiple times. Twice on the page, once for content and once for metadata. And to get all posts for overview and metadata.
 export const getPost = cache(async (path: string): Promise<VFile> => {
-  return await unified()
+  return unified()
     .use(remarkParse)
     .use(remarkFrontmatter)
     .use(function () {
