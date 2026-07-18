@@ -36,7 +36,7 @@ export default async function Post({ params }: { params: Promise<PostProps> }) {
 
   return (
     <article
-      className="prose dark:prose-invert prose-em:font-italic prose-em:not-italic"
+      className="prose dark:prose-invert"
       dangerouslySetInnerHTML={{ __html: file.value }}
     />
   );

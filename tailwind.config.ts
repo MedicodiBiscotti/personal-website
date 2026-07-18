@@ -22,7 +22,6 @@ const config: Config = {
     extend: {
       fontFamily: {
         sans: ["Inter Variable", ...defaultTheme.fontFamily.sans],
-        italic: ["Inter Variable Italic", ...defaultTheme.fontFamily.sans],
         mono: ["JetBrains Mono Regular", ...defaultTheme.fontFamily.mono],
       },
     },
