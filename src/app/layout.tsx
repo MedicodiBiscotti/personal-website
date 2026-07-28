@@ -2,6 +2,8 @@
 import "highlight.js/styles/github-dark-dimmed.min.css";
 import "./globals.css";
 import type { Metadata } from "next";
+import Footer from "@/components/Footer";
+import Header from "@/components/Header";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -16,10 +18,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       {/* TODO update Tailwind. heropattern is not compatible with v4, so get rid of it. */}
-      <body className="bg-neutral-100 heropattern-topography-pink-900/25 dark:bg-neutral-900 dark:heropattern-topography-pink-200/25">
-        <div className="mx-auto w-1/3 bg-neutral-100/75 dark:bg-neutral-900/75 dark:text-white">
+      <body className="grid min-h-svh grid-rows-[auto_1fr_auto] bg-neutral-100 heropattern-topography-pink-900/25 dark:bg-neutral-900 dark:text-white dark:heropattern-topography-pink-200/25">
+        <Header />
+        <div className="mx-auto min-w-[50%] bg-neutral-100/75 dark:bg-neutral-900/75">
           <main className="p-2">{children}</main>
         </div>
+        <Footer />
       </body>
     </html>
   );
