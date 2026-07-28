@@ -6,13 +6,17 @@ function Footer() {
     <footer className="bg-neutral-300 py-2 text-center dark:bg-neutral-900">
       <h2 className="text-2xl">Contact me!</h2>
       <div className="mt-2 flex justify-center gap-6">
-        <a href="mailto:kasperodahl@gmail.com">
+        <a
+          href="mailto:kasperodahl@gmail.com"
+          className="flex items-center gap-1"
+        >
           <EnvelopeIcon className="inline size-6" />
-          <span className="ms-1 underline">kasperodahl@gmail.com</span>
+          <span className="underline">kasperodahl@gmail.com</span>
         </a>
         <a
           href="https://www.linkedin.com/in/kasper-overgaard-dahl-5a478a237/"
           target="_blank"
+          className="flex items-center gap-1"
         >
           <img
             src="/InBug-White.png"
@@ -24,7 +28,7 @@ function Footer() {
             alt="LinkedIn"
             className="inline h-6 dark:hidden"
           />
-          <span className="ms-1 underline">Kasper Overgaard Dahl</span>
+          <span className="underline">Kasper Overgaard Dahl</span>
         </a>
       </div>
     </footer>
