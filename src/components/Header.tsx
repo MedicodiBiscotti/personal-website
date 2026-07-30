@@ -7,14 +7,15 @@ function Header() {
         <nav>
           <ul className="flex gap-4">
             <li>
-              <a href="/">Home</a>
+              <a href="/#">Home</a>
             </li>
             <li>
               <a href="/blog">Blog</a>
             </li>
           </ul>
         </nav>
-        <div>
+        <div className="flex gap-4">
+          <a href="#contact">Contact</a>
           <button>Theme</button>
         </div>
       </div>
