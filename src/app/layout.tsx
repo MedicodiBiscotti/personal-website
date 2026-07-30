@@ -20,7 +20,7 @@ export default function RootLayout({
       {/* TODO update Tailwind. heropattern is not compatible with v4, so get rid of it. */}
       <body className="grid min-h-svh grid-rows-[auto_1fr_auto] bg-neutral-100 heropattern-topography-pink-900/25 dark:bg-neutral-900 dark:text-white dark:heropattern-topography-pink-200/25">
         <Header />
-        <main className="container mx-auto bg-neutral-100/75 px-16 pb-4 pt-14 dark:bg-neutral-900/75">
+        <main className="mx-auto w-full max-w-4xl bg-neutral-100/75 px-16 pb-4 pt-14 sm:w-4/5 dark:bg-neutral-900/75">
           {children}
         </main>
         <Footer />
