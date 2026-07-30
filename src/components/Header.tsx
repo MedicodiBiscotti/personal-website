@@ -12,8 +12,9 @@ function Header() {
           <ul className="flex gap-4">
             <li>
               {/* Can be #top to work when scrolled down normally, but makes the URL uglier.
-              This is because Next preserves scroll position when navigating to the same page. */}
-              <Link href="/#">Home</Link>
+              This is because Next preserves scroll position when navigating to the same page.
+              Doesn't even need /# because Next sees it as a different page. */}
+              <Link href="/">Home</Link>
             </li>
             <li>
               <Link href="/blog">Blog</Link>
