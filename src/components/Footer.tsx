@@ -3,7 +3,7 @@ import React from "react";
 
 function Footer() {
   return (
-    <footer className="bg-neutral-300 py-2 text-center dark:bg-neutral-900">
+    <footer className="bg-neutral-100 py-2 text-center dark:bg-neutral-900">
       <h2 className="text-2xl">Contact me!</h2>
       <div className="mt-2 flex justify-center gap-6">
         <a
@@ -24,7 +24,7 @@ function Footer() {
             className="hidden h-6 dark:inline"
           />
           <img
-            src="/InBug-Black.png"
+            src="/LI-In-Bug.png"
             alt="LinkedIn"
             className="inline h-6 dark:hidden"
           />
