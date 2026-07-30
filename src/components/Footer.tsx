@@ -5,10 +5,10 @@ function Footer() {
   return (
     <footer className="bg-neutral-100 py-2 text-center dark:bg-neutral-900">
       <h2 className="text-2xl">Contact me!</h2>
-      <div className="mt-2 flex justify-center gap-6">
+      <div className="mt-2 flex flex-wrap justify-center gap-6">
         <a
           href="mailto:kasperodahl@gmail.com"
-          className="flex items-center gap-1"
+          className="flex w-max items-center gap-1"
         >
           <EnvelopeIcon className="inline size-6" />
           <span className="underline">kasperodahl@gmail.com</span>
@@ -16,7 +16,7 @@ function Footer() {
         <a
           href="https://www.linkedin.com/in/kasper-overgaard-dahl-5a478a237/"
           target="_blank"
-          className="flex items-center gap-1"
+          className="flex w-max items-center gap-1"
         >
           <img
             src="/InBug-White.png"
