@@ -16,7 +16,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="scroll-pt-14 scroll-smooth">
+    <html lang="en" data-theme="system" className="scroll-pt-14 scroll-smooth">
       {/* TODO update Tailwind. heropattern is not compatible with v4, so get rid of it. */}
       <body className="grid min-h-svh grid-rows-[1fr_auto] bg-neutral-100 heropattern-topography-pink-900/25 [scrollbar-gutter:stable] dark:bg-neutral-900 dark:text-white dark:heropattern-topography-pink-200/25">
         <Header />
