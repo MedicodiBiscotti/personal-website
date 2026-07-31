@@ -7,9 +7,9 @@ function Header() {
       id="top"
       className="fixed inset-x-0 bg-neutral-100 dark:bg-neutral-900"
     >
-      <div className="mx-auto flex h-10 w-full max-w-4xl items-center justify-between px-4 sm:w-4/5">
+      <div className="mx-auto flex h-10 w-full max-w-4xl items-center justify-between px-6 sm:w-4/5">
         <nav>
-          <ul className="flex gap-4">
+          <ul className="flex gap-6">
             <li>
               {/* Can be #top to work when scrolled down normally, but makes the URL uglier.
               This is because Next preserves scroll position when navigating to the same page.
@@ -21,7 +21,7 @@ function Header() {
             </li>
           </ul>
         </nav>
-        <div className="flex gap-4">
+        <div className="flex gap-6">
           <Link href="#contact">Contact</Link>
           <button>Theme</button>
         </div>
