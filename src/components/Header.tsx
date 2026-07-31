@@ -22,7 +22,7 @@ function Header() {
             </li>
           </ul>
         </nav>
-        <div className="flex gap-6">
+        <div className="flex items-center gap-6">
           <Link href="#contact">Contact</Link>
           <ThemeSwitch />
         </div>

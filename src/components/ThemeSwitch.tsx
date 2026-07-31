@@ -7,17 +7,18 @@ import React from "react";
 
 function ThemeSwitch() {
   return (
-    // For space between border, could simplify with no gap and px-2. But it would also have padding at start and end.
-    <div className="flex justify-items-center gap-2 divide-x *:border-current [&>:not(:first-child)]:ps-2">
-      <button>
-        <SunIcon className="size-6" />
-      </button>
-      <button>
-        <MoonIcon className="size-6" />
-      </button>
-      <button>
-        <ComputerDesktopIcon className="size-6" />
-      </button>
+    <div className="flex items-center rounded-full bg-neutral-200/75 dark:bg-neutral-800/75">
+      <div className="my-1 flex justify-items-center divide-x *:border-current *:px-2">
+        <button>
+          <SunIcon className="size-5" />
+        </button>
+        <button>
+          <MoonIcon className="size-5" />
+        </button>
+        <button>
+          <ComputerDesktopIcon className="size-5" />
+        </button>
+      </div>
     </div>
   );
 }
