@@ -1,3 +1,4 @@
+import ThemeSwitch from "@/components/ThemeSwitch";
 import Link from "next/link";
 import React from "react";
 
@@ -23,7 +24,7 @@ function Header() {
         </nav>
         <div className="flex gap-6">
           <Link href="#contact">Contact</Link>
-          <button>Theme</button>
+          <ThemeSwitch />
         </div>
       </div>
     </header>
