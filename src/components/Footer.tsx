@@ -8,10 +8,10 @@ function Footer() {
         <h2 id="contact" className="text-2xl">
           Contact me!
         </h2>
-        <div className="mt-2 grid grid-cols-[repeat(auto-fit,220px)] justify-center gap-x-6 gap-y-2 text-start">
+        <div className="mt-2 grid grid-cols-[repeat(auto-fit,215px)] justify-center gap-x-6 gap-y-2 text-start">
           <a
             href="mailto:kasperodahl@gmail.com"
-            className="flex w-max items-center gap-1"
+            className="flex items-center gap-1"
           >
             <EnvelopeIcon className="inline size-6" />
             <span className="underline">kasperodahl@gmail.com</span>
@@ -19,19 +19,36 @@ function Footer() {
           <a
             href="https://www.linkedin.com/in/kasper-overgaard-dahl-5a478a237/"
             target="_blank"
-            className="flex w-max items-center gap-1"
+            className="flex items-center gap-1"
           >
-            <img
-              src="/InBug-White.png"
-              alt="LinkedIn"
-              className="hidden h-6 dark:inline"
-            />
             <img
               src="/LI-In-Bug.png"
               alt="LinkedIn"
               className="inline h-6 dark:hidden"
             />
+            <img
+              src="/InBug-White.png"
+              alt="LinkedIn"
+              className="hidden h-6 dark:inline"
+            />
             <span className="underline">Kasper Overgaard Dahl</span>
+          </a>
+          <a
+            href="https://github.com/MedicodiBiscotti"
+            target="_blank"
+            className="flex items-center gap-1"
+          >
+            <img
+              src="/GitHub_Invertocat_Black.svg"
+              alt="GitHub"
+              className="size-6 dark:hidden"
+            />
+            <img
+              src="/GitHub_Invertocat_White.svg"
+              alt="GitHub"
+              className="hidden size-6 dark:inline"
+            />
+            <span className="underline">MedicodiBiscotti</span>
           </a>
         </div>
         <small className="mx-auto">&copy; 2026 Kasper Overgaard Dahl</small>
