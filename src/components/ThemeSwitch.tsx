@@ -34,18 +34,19 @@ function ThemeSwitch() {
     <div className="flex items-center rounded-full bg-neutral-200/75 dark:bg-neutral-800/75">
       <div className="my-1 flex justify-items-center divide-x *:border-current *:px-2">
         <button onClick={() => updateTheme("light")}>
+          {/* bigger size, padding, and negative margin to make the background bigger. */}
           <SunIcon
-            className={`size-5 ${theme === "light" ? "rounded-full bg-zinc-300 dark:bg-zinc-600" : ""}`}
+            className={`-m-0.5 size-6 rounded-full p-0.5 ${theme === "light" ? "bg-zinc-300 dark:bg-zinc-600" : ""}`}
           />
         </button>
         <button onClick={() => updateTheme("dark")}>
           <MoonIcon
-            className={`size-5 ${theme === "dark" ? "rounded-full bg-zinc-300 dark:bg-zinc-600" : ""}`}
+            className={`-m-0.5 size-6 rounded-full p-0.5 ${theme === "dark" ? "bg-zinc-300 dark:bg-zinc-600" : ""}`}
           />
         </button>
         <button onClick={() => updateTheme("system")}>
           <ComputerDesktopIcon
-            className={`size-5 ${theme === "system" ? "rounded-full bg-zinc-300 dark:bg-zinc-600" : ""}`}
+            className={`-m-0.5 size-6 rounded-full p-0.5 ${theme === "system" ? "bg-zinc-300 dark:bg-zinc-600" : ""}`}
           />
         </button>
       </div>
