@@ -41,12 +41,12 @@ function Footer() {
             <img
               src="/GitHub_Invertocat_Black.svg"
               alt="GitHub"
-              className="size-6 dark:hidden"
+              className="inline h-6 dark:hidden"
             />
             <img
               src="/GitHub_Invertocat_White.svg"
               alt="GitHub"
-              className="hidden size-6 dark:inline"
+              className="hidden h-6 dark:inline"
             />
             <span className="underline">MedicodiBiscotti</span>
           </a>
