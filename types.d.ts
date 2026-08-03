@@ -5,6 +5,7 @@ declare module "vfile" {
     matter?: {
       title: string;
       slug: string;
+      description: string;
     };
   }
 }

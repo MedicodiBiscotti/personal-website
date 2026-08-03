@@ -1,6 +1,7 @@
 ---
 title: Examples from Markdown
 slug: examples
+description: Examples of different HTML elements rendered from Markdown including code fences.
 created: 2024-10-15
 ---
 
