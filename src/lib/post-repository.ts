@@ -3,7 +3,9 @@ import { join } from "path";
 import { cache } from "react";
 import rehypeAutolinkHeadings from "rehype-autolink-headings";
 import rehypeHighlight from "rehype-highlight";
+import rehypeInferDescriptionMeta from "rehype-infer-description-meta";
 import rehypeInferReadingTimeMeta from "rehype-infer-reading-time-meta";
+import rehypeInferTitleMeta from "rehype-infer-title-meta";
 import rehypeSanitize from "rehype-sanitize";
 import rehypeSlug from "rehype-slug";
 import rehypeStringify from "rehype-stringify";
@@ -67,6 +69,8 @@ export const getPost = cache(async (path: string): Promise<VFile> => {
     .use(rehypeHighlight)
     .use(rehypeSlug)
     .use(rehypeAutolinkHeadings, { behavior: "wrap" })
+    .use(rehypeInferTitleMeta)
+    .use(rehypeInferDescriptionMeta, { selector: "p" })
     .use(rehypeInferReadingTimeMeta)
     .use(rehypeStringify)
     .process(await read(path));

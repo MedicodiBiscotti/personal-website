@@ -8,11 +8,13 @@ function PostCard({ post }: PostCardProps) {
   return (
     /* Can remove `` when matter undefined gets fixed. */
     <Link href={`${post.data.matter?.slug}`}>
-      <div className="rounded-xl bg-neutral-200/75 p-4 dark:bg-neutral-800/75">
-        <h2 className="text-balance text-lg font-bold">
-          {post.data.matter?.title}
+      <div className="size-full rounded-xl bg-neutral-200/75 p-4 dark:bg-neutral-800/75">
+        <h2 className="text-balance text-xl font-bold leading-none">
+          {post.data.matter?.title ?? post.data.meta?.title}
         </h2>
-        <p>{post.data.matter?.description}</p>
+        <p className="mt-3 line-clamp-5">
+          {post.data.matter?.description ?? post.data.meta?.description}
+        </p>
       </div>
     </Link>
   );
