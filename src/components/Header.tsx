@@ -1,14 +1,9 @@
-"use client";
-
+import NavLink from "@/components/NavLink";
 import ThemeSwitch from "@/components/ThemeSwitch";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
 import React from "react";
 
 function Header() {
-  const pathname = usePathname();
-  const activeClass = "bg-neutral-200/75 dark:bg-neutral-800/75";
-
   return (
     <header
       id="top"
@@ -16,26 +11,17 @@ function Header() {
     >
       <div className="mx-auto flex h-10 w-full max-w-6xl items-stretch justify-between px-6 sm:w-4/5">
         <nav>
-          {/* So many nested flexes just to fill height and center text */}
           <ul className="flex h-full">
             <li>
               {/* Can be #top to work when scrolled down normally, but makes the URL uglier.
               This is because Next preserves scroll position when navigating to the same page.
               Doesn't even need /# because Next sees it as a different page. */}
-              <Link
-                className={`inline-block h-full content-center px-3 hover:bg-neutral-200/75 hover:dark:bg-neutral-800/75 ${pathname === "/" ? activeClass : ""}`}
-                href="/"
-              >
-                Home
-              </Link>
+              <NavLink target="/">Home</NavLink>
             </li>
             <li>
-              <Link
-                className={`inline-block h-full content-center px-3 hover:bg-neutral-200/75 hover:dark:bg-neutral-800/75 ${pathname.startsWith("/blog/") ? activeClass : ""}`}
-                href="/blog"
-              >
+              <NavLink target="/blog" exact={false}>
                 Blog
-              </Link>
+              </NavLink>
             </li>
           </ul>
         </nav>
