@@ -6,8 +6,9 @@ import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 
 export const metadata: Metadata = {
-  title: "Kasper Dahl - Software Developer",
-  description: "Software developer located in the Copenhagen area.",
+  title: "Kasper Overgaard Dahl - Software Developer",
+  description:
+    "Hi, I'm a Software developer located in the Copenhagen metropolitan area.",
 };
 
 export default function RootLayout({
@@ -23,12 +24,12 @@ export default function RootLayout({
             __html: `(function(){try{var t=localStorage.getItem("theme");if(!t||t==="system")t=window.matchMedia("(prefers-color-scheme:dark)").matches?"dark":"light";if(t)document.documentElement.setAttribute("data-theme",t)}catch(e){}})()`,
           }}
         />
-        <title>Kasper Dahl - Software Developer</title>
+        <title>Kasper Overgaard Dahl - Software Developer</title>
       </head>
       {/* TODO update Tailwind. heropattern is not compatible with v4, so get rid of it. */}
       <body className="grid min-h-svh grid-rows-[1fr_auto] bg-neutral-100 heropattern-topography-pink-900/25 [scrollbar-gutter:stable] dark:bg-neutral-900 dark:text-white dark:heropattern-topography-pink-200/25">
         <Header />
-        <main className="mx-auto w-full max-w-4xl bg-neutral-100/75 px-[clamp(1.5rem,calc(0.591rem+4.545vw),4rem)] pb-4 pt-14 sm:w-4/5 dark:bg-neutral-900/75">
+        <main className="mx-auto w-full max-w-6xl bg-neutral-100/75 px-[clamp(1.5rem,calc(0.591rem+4.545vw),4rem)] pb-4 pt-14 sm:w-4/5 dark:bg-neutral-900/75">
           {children}
         </main>
         <Footer />

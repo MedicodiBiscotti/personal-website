@@ -5,10 +5,10 @@ function Footer() {
   return (
     <footer className="bg-neutral-100 py-2 text-center dark:bg-neutral-900">
       <div className="mx-auto w-full max-w-4xl px-4 sm:w-4/5">
-        <h2 id="contact" className="text-2xl">
-          Contact me!
-        </h2>
-        <div className="mt-2 grid grid-cols-[repeat(auto-fit,215px)] justify-center gap-x-6 gap-y-2 text-start">
+        <div
+          id="contact"
+          className="mt-2 grid grid-cols-[repeat(auto-fit,215px)] justify-center gap-x-6 gap-y-2 text-start"
+        >
           <a
             href="mailto:kasperodahl@gmail.com"
             className="flex items-center gap-1"

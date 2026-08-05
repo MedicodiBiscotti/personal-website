@@ -14,7 +14,7 @@ function Header() {
       id="top"
       className="fixed inset-x-0 bg-neutral-100 dark:bg-neutral-900"
     >
-      <div className="mx-auto flex h-10 w-full max-w-4xl items-stretch justify-between px-6 sm:w-4/5">
+      <div className="mx-auto flex h-10 w-full max-w-6xl items-stretch justify-between px-6 sm:w-4/5">
         <nav>
           {/* So many nested flexes just to fill height and center text */}
           <ul className="flex h-full">
