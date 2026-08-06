@@ -19,7 +19,7 @@ function NavLink({ children, target, exact = true }: Props) {
 
   return (
     <Link
-      className={`inline-block h-full content-center px-3 ${hoverClass} ${active ? activeClass : ""}`}
+      className={`inline-block h-full content-center px-3 transition duration-200 ${hoverClass} ${active ? activeClass : ""}`}
       href={target}
     >
       {children}
