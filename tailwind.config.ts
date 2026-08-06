@@ -23,7 +23,7 @@ const config: Config = {
     extend: {
       fontFamily: {
         sans: ["Inter Variable", ...defaultTheme.fontFamily.sans],
-        mono: ["JetBrains Mono Regular", ...defaultTheme.fontFamily.mono],
+        mono: ["JetBrains Mono", ...defaultTheme.fontFamily.mono],
       },
     },
   },

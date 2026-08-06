@@ -18,6 +18,7 @@ Some _italic_ text.
 ```
 
 ```python
+# A fancy little comment
 def main():
   print("Hello world")
 ```

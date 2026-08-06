@@ -32,6 +32,7 @@ export default function Home() {
         code={`
           if (visitor.isHiring) {
             getInTouch();
+            // details below
           }
         `}
       />
