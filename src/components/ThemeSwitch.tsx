@@ -7,27 +7,26 @@ import {
 } from "@heroicons/react/24/outline";
 import React, { useLayoutEffect, useState } from "react";
 
-type Theme = "light" | "dark" | "system";
+type Theme = "light" | "dark" | null;
 
 function ThemeSwitch() {
   const [theme, setTheme] = useState<Theme>();
 
   useLayoutEffect(() => {
-    setTheme((localStorage.getItem("theme") ?? "system") as Theme);
+    setTheme(localStorage.getItem("theme") as Theme);
   }, []);
 
   function updateTheme(newTheme: Theme) {
-    localStorage.setItem("theme", newTheme);
-    if (newTheme === "system") {
-      document.documentElement.dataset.theme = window.matchMedia(
-        "(prefers-color-scheme: dark)",
-      ).matches
+    setTheme(newTheme);
+    if (newTheme) {
+      localStorage.setItem("theme", newTheme);
+    } else {
+      localStorage.removeItem("theme");
+      newTheme = window.matchMedia("(prefers-color-scheme: dark)").matches
         ? "dark"
         : "light";
-    } else {
-      document.documentElement.dataset.theme = newTheme;
     }
-    setTheme(newTheme);
+    document.documentElement.dataset.theme = newTheme;
   }
 
   return (
@@ -44,9 +43,9 @@ function ThemeSwitch() {
             className={`-m-0.5 size-6 rounded-full p-0.5 transition duration-200 ${theme === "dark" ? "bg-zinc-300 dark:bg-zinc-600" : ""}`}
           />
         </button>
-        <button onClick={() => updateTheme("system")}>
+        <button onClick={() => updateTheme(null)}>
           <ComputerDesktopIcon
-            className={`-m-0.5 size-6 rounded-full p-0.5 transition duration-200 ${theme === "system" ? "bg-zinc-300 dark:bg-zinc-600" : ""}`}
+            className={`-m-0.5 size-6 rounded-full p-0.5 transition duration-200 ${theme === null ? "bg-zinc-300 dark:bg-zinc-600" : ""}`}
           />
         </button>
       </div>
