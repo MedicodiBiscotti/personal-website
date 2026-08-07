@@ -16,14 +16,18 @@ export default function Home() {
           <span className="text-[#005cc5] dark:text-[#6cb6ff]">am</span> ===
         </code>
       </pre>
-      <h1 className="mb-2 text-6xl font-extrabold">Kasper Dahl</h1>
+      {/* 4xl - 6xl font size */}
+      <h1 className="mb-2 text-[clamp(2.25rem,calc(1.705rem+2.727vw),3.75rem)] font-extrabold leading-none">
+        Kasper Dahl
+      </h1>
       <div className="mt-4 grid gap-8 md:grid-cols-[33%_1fr]">
         <img
           className="block h-[300px] w-full bg-neutral-600"
           alt="Picture of me"
         />
         <div className="flex flex-col gap-8 md:gap-0">
-          <h2 className="text-3xl font-bold">
+          {/* 2xl - 3xl font size */}
+          <h2 className="text-[clamp(1.50rem,calc(1.364rem+0.682vw),1.88rem)] font-bold">
             I'm a software developer in the Copenhagen metropolitan area.
           </h2>
           <div className="flex grow items-center">
