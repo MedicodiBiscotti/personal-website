@@ -1,9 +1,25 @@
 import Code from "@/components/Code";
+import hljs from "highlight.js/lib/common";
 
 export default function Home() {
   return (
-    <>
-      <p className="mt-6">Hello, I'm</p>
+    <div className="mt-16">
+      {/*
+        hljs adds semantic classes which are styled from themes.
+        I only want a dark theme; even in light mode, code is on a dark background.
+        But this part is not on a background, so hljs won't work.
+        Can be manual spans or shikijs which allows specifying themes per block.
+        */}
+      <pre>
+        <code
+          className="language-javascript font-mono"
+          dangerouslySetInnerHTML={{
+            __html: hljs.highlight("hello(); i.am ===", {
+              language: "javascript",
+            }).value,
+          }}
+        />
+      </pre>
       <h1 className="mb-2 text-6xl font-thin">Kasper Dahl</h1>
       <div className="grid grid-cols-[33%_66%] gap-8">
         <img
@@ -31,11 +47,10 @@ export default function Home() {
         language="js"
         code={`
           if (visitor.isHiring) {
-            getInTouch();
-            // details below
+            getInTouch(); // details below
           }
         `}
       />
-    </>
+    </div>
   );
 }
