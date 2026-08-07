@@ -17,10 +17,10 @@ export default function Home() {
         </code>
       </pre>
       {/* 4xl - 6xl font size */}
-      <h1 className="mb-2 text-[clamp(2.25rem,calc(1.705rem+2.727vw),3.75rem)] font-extrabold leading-none">
+      <h1 className="text-[clamp(2.25rem,calc(1.705rem+2.727vw),3.75rem)] font-extrabold leading-none">
         Kasper Dahl
       </h1>
-      <div className="mt-4 grid gap-8 md:grid-cols-[33%_1fr]">
+      <div className="mt-6 grid gap-8 md:grid-cols-[33%_1fr]">
         <img
           className="block h-[300px] w-full bg-neutral-600"
           alt="Picture of me"
@@ -39,7 +39,7 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <p className="mt-4 text-xl md:text-center">
+      <p className="mt-8 text-xl md:text-center">
         Welcome to my little corner of the internet, and...
       </p>
       <Code
