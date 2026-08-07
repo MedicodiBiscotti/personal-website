@@ -17,7 +17,7 @@ export default function Home() {
         </code>
       </pre>
       <h1 className="mb-2 text-6xl font-extrabold">Kasper Dahl</h1>
-      <div className="mt-4 grid gap-8 md:grid-cols-[33%_66%]">
+      <div className="mt-4 grid gap-8 md:grid-cols-[33%_1fr]">
         <img
           className="block h-[300px] w-full bg-neutral-600"
           alt="Picture of me"
