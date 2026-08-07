@@ -6,13 +6,13 @@
   @font-face {
     font-family: "Inter Variable";
     src: url("./fonts/InterVariable.woff2") format("woff2");
-    font-feature-settings: "calt", "ss01", "ss02", "cv12", "cv13", "case";
+    font-feature-settings: "calt", "ss01", "ss02", "dlig", "case";
   }
   @font-face {
     font-family: "Inter Variable";
     src: url("./fonts/InterVariable-Italic.woff2") format("woff2");
     font-style: italic;
-    font-feature-settings: "calt", "ss01", "ss02", "cv12", "cv13", "case";
+    font-feature-settings: "calt", "ss01", "ss02", "dlig", "case";
   }
   @font-face {
     font-family: "JetBrains Mono";
