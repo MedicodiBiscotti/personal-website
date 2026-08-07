@@ -22,10 +22,10 @@ export default function Home() {
           className="block h-[300px] w-full bg-neutral-600"
           alt="Picture of me"
         />
-        <div className="flex flex-col">
-          <p className="text-3xl font-bold">
+        <div className="flex flex-col gap-8 md:gap-0">
+          <h2 className="text-3xl font-bold">
             I'm a software developer in the Copenhagen metropolitan area.
-          </p>
+          </h2>
           <div className="flex grow items-center">
             <p className="text-xl">
               From simple CLI tools to distributed systems of microservices, I
@@ -35,7 +35,7 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <p className="mt-4 text-center text-xl">
+      <p className="mt-4 text-xl md:text-center">
         Welcome to my little corner of the internet, and...
       </p>
       <Code
