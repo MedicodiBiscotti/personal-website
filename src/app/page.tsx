@@ -16,8 +16,8 @@ export default function Home() {
           <span className="text-[#005cc5] dark:text-[#6cb6ff]">am</span> ===
         </code>
       </pre>
-      <h1 className="mb-2 text-6xl font-thin">Kasper Dahl</h1>
-      <div className="grid grid-cols-[33%_66%] gap-8">
+      <h1 className="mb-2 text-6xl font-extrabold">Kasper Dahl</h1>
+      <div className="mt-4 grid gap-8 md:grid-cols-[33%_66%]">
         <img
           className="block h-[300px] w-full bg-neutral-600"
           alt="Picture of me"
