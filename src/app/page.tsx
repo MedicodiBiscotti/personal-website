@@ -1,5 +1,4 @@
 import Code from "@/components/Code";
-import hljs from "highlight.js/lib/common";
 
 export default function Home() {
   return (
@@ -11,14 +10,11 @@ export default function Home() {
         Can be manual spans or shikijs which allows specifying themes per block.
         */}
       <pre>
-        <code
-          className="language-javascript font-mono"
-          dangerouslySetInnerHTML={{
-            __html: hljs.highlight("hello(); i.am ===", {
-              language: "javascript",
-            }).value,
-          }}
-        />
+        <code className="font-mono">
+          <span className="text-[#6f42c1] dark:text-[#dcbdfb]">hello</span>();
+          i.
+          <span className="text-[#005cc5] dark:text-[#6cb6ff]">am</span> ===
+        </code>
       </pre>
       <h1 className="mb-2 text-6xl font-thin">Kasper Dahl</h1>
       <div className="grid grid-cols-[33%_66%] gap-8">
