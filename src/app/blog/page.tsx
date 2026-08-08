@@ -22,13 +22,18 @@ function PostCard({ post }: PostCardProps) {
 
 export default async function BlogPage() {
   const posts = await getAllPosts();
+  const sorted = posts.toSorted((a, b) =>
+    (b.data.matter?.created as string).localeCompare(
+      a.data.matter?.created as string,
+    ),
+  );
 
   return (
     <div>
       <h1 className="mb-2 text-6xl font-thin">Blog</h1>
       <p className="my-2">Welcome to the blog page!</p>
       <div className="grid grid-cols-[repeat(auto-fit,minmax(300px,1fr))] gap-8">
-        {posts.map((post) => (
+        {sorted.map((post) => (
           <PostCard key={post.data.matter?.slug} post={post} />
         ))}
       </div>
