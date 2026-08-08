@@ -71,7 +71,7 @@ export const getPost = cache(async (path: string): Promise<VFile> => {
     .use(rehypeAutolinkHeadings, { behavior: "wrap" })
     .use(rehypeInferTitleMeta)
     .use(rehypeInferDescriptionMeta, { selector: "p" })
-    .use(rehypeInferReadingTimeMeta)
+    .use(rehypeInferReadingTimeMeta, { age: 21 })
     .use(rehypeStringify)
     .process(await read(path));
 });

@@ -6,6 +6,8 @@ declare module "vfile" {
       title: string;
       slug: string;
       description: string;
+      created: string;
+      updated?: string;
     };
   }
 }
