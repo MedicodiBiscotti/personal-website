@@ -1,3 +1,4 @@
+import { formatReadingTime } from "@/lib/metadata-utils";
 import { getAllPostSlugs, getPostBySlug } from "@/lib/post-repository";
 import { ClockIcon } from "@heroicons/react/24/outline";
 import type { Metadata } from "next";
@@ -27,11 +28,6 @@ export async function generateMetadata({
   };
 }
 
-function formatReadingTime(minutes: number) {
-  minutes = Math.max(1, Math.floor(minutes));
-  return `${minutes} minute${minutes != 1 ? "s" : ""}`;
-}
-
 function PostHeader({ file }: { file: VFile }) {
   const { matter, meta } = file.data;
   return (
@@ -47,8 +43,8 @@ function PostHeader({ file }: { file: VFile }) {
           <span>Posted:</span>
           <span>{matter?.created}</span>
         </div>
-        <p>
-          <ClockIcon className="me-2 inline-block size-5 align-text-bottom" />
+        <p className="flex items-center gap-2">
+          <ClockIcon className="size-5" />
           <span>{formatReadingTime(meta?.readingTime as number)}</span>
         </p>
         {matter?.updated && (
