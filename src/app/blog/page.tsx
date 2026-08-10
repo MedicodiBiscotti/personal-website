@@ -11,7 +11,7 @@ function PostCard({ post }: PostCardProps) {
   return (
     /* Can remove `` when matter undefined gets fixed. */
     <Link href={`${matter?.slug}`}>
-      <div className="size-full rounded-xl bg-neutral-200/75 p-4 dark:bg-neutral-800/75">
+      <div className="size-full rounded-xl bg-neutral-200/75 p-4 dark:bg-slate-800/75">
         <h2 className="text-balance text-xl font-bold leading-none">
           {matter?.title ?? meta?.title}
         </h2>

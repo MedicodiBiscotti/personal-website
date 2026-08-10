@@ -13,8 +13,8 @@ type Props = {
 
 function NavLink({ children, target, exact = true }: Props) {
   const pathname = usePathname();
-  const activeClass = "bg-neutral-200/75 dark:bg-neutral-800/75";
-  const hoverClass = "hover:bg-neutral-200/75 hover:dark:bg-neutral-800/75";
+  const activeClass = "bg-neutral-200/75 dark:bg-slate-800/75";
+  const hoverClass = "hover:bg-neutral-200/75 hover:dark:bg-slate-800/75";
   const active = exact ? pathname === target : pathname.startsWith(target);
 
   return (
