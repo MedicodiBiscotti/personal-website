@@ -9,8 +9,8 @@ export default function Home() {
         But this part is not on a background, so hljs won't work.
         Can be manual spans or shikijs which allows specifying themes per block.
         */}
-      <div className="mx-auto w-fit">
-        <pre className="text-center">
+      <div className="text-center">
+        <pre>
           <code className="font-mono">
             <span className="text-[#6f42c1] dark:text-[#dcbdfb]">hello</span>();
             i.
