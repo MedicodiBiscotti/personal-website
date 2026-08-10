@@ -9,17 +9,19 @@ export default function Home() {
         But this part is not on a background, so hljs won't work.
         Can be manual spans or shikijs which allows specifying themes per block.
         */}
-      <pre>
-        <code className="font-mono">
-          <span className="text-[#6f42c1] dark:text-[#dcbdfb]">hello</span>();
-          i.
-          <span className="text-[#005cc5] dark:text-[#6cb6ff]">am</span> ===
-        </code>
-      </pre>
-      {/* 4xl - 6xl font size */}
-      <h1 className="text-[clamp(2.25rem,calc(1.705rem+2.727vw),3.75rem)] font-extrabold leading-none">
-        Kasper Dahl
-      </h1>
+      <div className="mx-auto w-fit">
+        <pre className="text-center">
+          <code className="font-mono">
+            <span className="text-[#6f42c1] dark:text-[#dcbdfb]">hello</span>();
+            i.
+            <span className="text-[#005cc5] dark:text-[#6cb6ff]">am</span> ===
+          </code>
+        </pre>
+        {/* 4xl - 6xl font size */}
+        <h1 className="text-[clamp(2.25rem,calc(1.705rem+2.727vw),3.75rem)] font-extrabold leading-none">
+          Kasper Dahl
+        </h1>
+      </div>
       <div className="mt-6 grid gap-8 md:grid-cols-[33%_1fr]">
         <img
           className="block h-[300px] w-full bg-neutral-600"
