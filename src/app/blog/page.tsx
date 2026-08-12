@@ -40,9 +40,10 @@ export default async function BlogPage() {
 
   return (
     <div>
-      <h1 className="mb-2 text-6xl font-thin">Blog</h1>
-      <p className="my-2">Welcome to the blog page!</p>
-      <div className="grid grid-cols-[repeat(auto-fit,minmax(300px,1fr))] gap-8">
+      <h1 className="text-center text-[clamp(2.25rem,calc(1.705rem+2.727vw),3.75rem)] font-bold leading-none">
+        Blog
+      </h1>
+      <div className="mt-6 grid grid-cols-[repeat(auto-fit,minmax(300px,1fr))] gap-8">
         {sorted.map((post) => (
           <PostCard key={post.data.matter?.slug} post={post} />
         ))}
