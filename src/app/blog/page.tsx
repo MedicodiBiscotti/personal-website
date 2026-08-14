@@ -11,11 +11,11 @@ function PostCard({ post }: PostCardProps) {
   return (
     /* Can remove `` when matter undefined gets fixed. */
     <Link href={`${matter?.slug}`}>
-      <div className="size-full rounded-xl bg-neutral-200/75 p-4 dark:bg-slate-800/75">
-        <h2 className="text-balance text-xl font-bold leading-none">
+      <div className="size-full rounded-xl bg-slate-200 p-4 dark:bg-slate-800/75">
+        <h2 className="text-xl leading-none font-bold text-balance">
           {matter?.title ?? meta?.title}
         </h2>
-        <div className="mt-2 flex justify-between text-sm tabular-nums text-neutral-500 dark:text-neutral-400">
+        <div className="mt-2 flex justify-between text-sm text-neutral-500 tabular-nums dark:text-neutral-400">
           <p>{matter?.created}</p>
           <p className="flex items-center gap-1">
             <ClockIcon className="size-5" />
@@ -40,7 +40,7 @@ export default async function BlogPage() {
 
   return (
     <div>
-      <h1 className="text-center text-[clamp(2.25rem,calc(1.705rem+2.727vw),3.75rem)] font-bold leading-none">
+      <h1 className="text-center text-[clamp(2.25rem,calc(1.705rem+2.727vw),3.75rem)] leading-none font-bold">
         Blog
       </h1>
       <div className="mt-6 grid grid-cols-[repeat(auto-fit,minmax(300px,1fr))] gap-8">
