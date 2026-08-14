@@ -1,6 +1,16 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+@custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
+
+@theme {
+  --font-sans:
+    Inter Variable, ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-mono:
+    JetBrains Mono, ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+    "Liberation Mono", "Courier New", monospace;
+}
 
 @layer base {
   @font-face {
@@ -26,6 +36,11 @@
     font-style: italic;
     font-feature-settings:
       "calt", "ss19"; /* Keep ligatures, but break up equals. */
+  }
+
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
   }
 }
 

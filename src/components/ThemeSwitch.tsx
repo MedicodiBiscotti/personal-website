@@ -31,7 +31,7 @@ function ThemeSwitch() {
 
   return (
     <div className="flex items-center rounded-full bg-neutral-200/75 dark:bg-slate-800/75">
-      <div className="my-1 flex justify-items-center divide-x *:border-current *:px-2">
+      <div className="my-1 flex justify-items-center divide-x *:px-2">
         <button onClick={() => updateTheme("light")}>
           {/* bigger size, padding, and negative margin to make the background bigger. */}
           <SunIcon

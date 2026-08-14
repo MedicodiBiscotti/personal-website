@@ -27,7 +27,7 @@ export default function RootLayout({
         <title>Kasper Overgaard Dahl - Software Developer</title>
       </head>
       {/* TODO update Tailwind. heropattern is not compatible with v4, so get rid of it. */}
-      <body className="grid min-h-svh grid-rows-[1fr_auto] bg-gradient-to-br bg-fixed [scrollbar-gutter:stable] dark:bg-black dark:from-slate-900 dark:to-slate-950/70 dark:text-white">
+      <body className="grid min-h-svh grid-rows-[1fr_auto] bg-linear-to-br bg-fixed scrollbar-gutter-stable dark:bg-black dark:from-slate-900 dark:to-slate-950/70 dark:text-white">
         <Header />
         <main className="mx-auto w-full max-w-6xl px-[clamp(1.5rem,calc(0.591rem+4.545vw),4rem)] pb-4 pt-16 sm:w-4/5 sm:bg-white/25 dark:sm:bg-black/25">
           {children}

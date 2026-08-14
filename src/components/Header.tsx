@@ -7,7 +7,7 @@ function Header() {
   return (
     <header
       id="top"
-      className="fixed inset-x-0 bg-neutral-100 shadow dark:bg-gray-950"
+      className="fixed inset-x-0 bg-neutral-100 shadow-sm dark:bg-gray-950"
     >
       <div className="mx-auto flex h-10 w-full max-w-6xl items-stretch justify-between px-6 sm:w-4/5">
         <nav>
