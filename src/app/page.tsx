@@ -18,13 +18,14 @@ export default function Home() {
           </code>
         </pre>
         {/* 4xl - 6xl font size */}
-        <h1 className="text-[clamp(2.25rem,calc(1.705rem+2.727vw),3.75rem)] font-extrabold leading-none">
+        <h1 className="text-[clamp(2.25rem,calc(1.705rem+2.727vw),3.75rem)] leading-none font-extrabold">
           Kasper Dahl
         </h1>
       </div>
-      <div className="mt-6 grid gap-8 md:grid-cols-[33%_1fr]">
+      <div className="mt-6 grid gap-8 md:grid-cols-[35%_1fr]">
         <img
-          className="block h-[300px] w-full bg-neutral-600"
+          className="mx-auto block h-80 rounded-4xl border-3 border-blue-400 object-cover object-top p-1 dark:border-slate-400"
+          src="/profile.jpg"
           alt="Picture of me"
         />
         <div className="flex flex-col gap-8 md:gap-0">
