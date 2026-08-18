@@ -7,7 +7,7 @@
 # Want to help us make this template better? Share your feedback here: https://forms.gle/ybq9Krt8jtBL3iCk7
 
 ARG NODE_VERSION=26.5.0
-ARG PNPM_VERSION=10.27.0
+ARG PNPM_VERSION=11.22.0
 
 ################################################################################
 # Use node image for base image for all build stages.
@@ -31,6 +31,7 @@ FROM base AS deps
 # No separation of prod and dev deps, because it is a static output. No runtime deps are needed.
 RUN --mount=type=bind,source=package.json,target=package.json \
     --mount=type=bind,source=pnpm-lock.yaml,target=pnpm-lock.yaml \
+    --mount=type=bind,source=pnpm-workspace.yaml,target=pnpm-workspace.yaml \
     --mount=type=cache,target=/root/.local/share/pnpm/store \
     pnpm install --frozen-lockfile
 
