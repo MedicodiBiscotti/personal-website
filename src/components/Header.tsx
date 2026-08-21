@@ -19,7 +19,10 @@ function Header() {
               <NavLink target="/">Home</NavLink>
             </li>
             <li>
-              <NavLink target="/blog" exact={false}>
+              <NavLink target="/skills/">Skills</NavLink>
+            </li>
+            <li>
+              <NavLink target="/blog/" exact={false}>
                 Blog
               </NavLink>
             </li>
