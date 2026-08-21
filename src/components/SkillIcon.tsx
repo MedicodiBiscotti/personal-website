@@ -1,11 +1,10 @@
-import React from "react";
+import { PropsWithChildren } from "react";
 
 type Props = {
-  children: React.ReactNode;
   background?: "light" | "dark" | "both";
 };
 
-function SkillIcon({ children, background }: Props) {
+function SkillIcon({ children, background }: PropsWithChildren<Props>) {
   const lightBackground = "bg-slate-400/50";
   const darkBackground = "dark:bg-slate-200";
   const darkReset = "dark:bg-transparent";
