@@ -33,7 +33,7 @@ function SkillsPage() {
   return (
     <>
       <div className="grid grid-flow-col-dense gap-4">
-        <div className="flex flex-col gap-2 rounded-3xl border-3 border-blue-400 px-4 pt-2 pb-4 shadow-sm shadow-blue-400 dark:border-indigo-300 dark:shadow-indigo-300">
+        <div className="flex flex-col gap-2 rounded-3xl border-3 border-blue-400 bg-slate-200 px-4 pt-2 pb-4 shadow-sm shadow-blue-400 dark:border-indigo-300 dark:bg-slate-800/75 dark:shadow-indigo-300">
           <p className="text-sm text-blue-400 dark:text-indigo-300">Frontend</p>
           <div className="flex w-fit flex-wrap place-content-center gap-4 *:drop-shadow-blue-400 *:dark:drop-shadow-indigo-300">
             <SkillIcon>
@@ -72,7 +72,7 @@ function SkillsPage() {
           </div>
         </div>
 
-        <div className="flex flex-col gap-2 rounded-3xl border-3 border-red-400 px-4 pt-2 pb-4 shadow-sm shadow-red-400">
+        <div className="flex flex-col gap-2 rounded-3xl border-3 border-red-400 bg-slate-200 px-4 pt-2 pb-4 shadow-sm shadow-red-400 dark:bg-slate-800/75">
           <p className="text-sm text-red-400">Backend</p>
           <div className="flex w-fit flex-wrap place-content-center gap-4 *:drop-shadow-red-400 dark:border-red-400">
             <SkillIcon background="dark">
@@ -114,7 +114,7 @@ function SkillsPage() {
           </div>
         </div>
 
-        <div className="flex flex-col gap-2 rounded-3xl border-3 border-purple-500 px-4 pt-2 pb-4 shadow-sm shadow-purple-500">
+        <div className="flex flex-col gap-2 rounded-3xl border-3 border-purple-500 bg-slate-200 px-4 pt-2 pb-4 shadow-sm shadow-purple-500 dark:bg-slate-800/75">
           <p className="text-sm text-purple-500">Databases</p>
           <div className="flex h-full w-fit flex-wrap place-content-center gap-4 *:drop-shadow-purple-500 dark:border-purple-500">
             <SkillIcon>
