@@ -12,9 +12,14 @@ export default function Home() {
       <div className="text-center">
         <pre>
           <code className="font-mono">
-            <span className="text-[#6f42c1] dark:text-[#dcbdfb]">hello</span>();
-            i.
-            <span className="text-[#005cc5] dark:text-[#6cb6ff]">am</span> ===
+            <span className="text-[#6f42c1] text-shadow-[0px_0px_5px] dark:text-[#dcbdfb]">
+              hello
+            </span>
+            (); i.
+            <span className="text-[#005cc5] text-shadow-[0px_0px_5px] dark:text-[#6cb6ff]">
+              am
+            </span>{" "}
+            ===
           </code>
         </pre>
         {/* 4xl - 6xl font size */}
@@ -24,7 +29,7 @@ export default function Home() {
       </div>
       <div className="mt-6 grid gap-8 md:grid-cols-[35%_1fr]">
         <img
-          className="mx-auto block h-80 rounded-4xl border-3 border-blue-400 object-cover object-top p-1 dark:border-slate-400"
+          className="mx-auto block h-80 rounded-4xl object-cover object-top p-1 shadow-[1px_3px_6px_1px] shadow-blue-400 outline-3 outline-blue-400 transition-all duration-300 hover:scale-102 hover:shadow-[2px_4px_8px_2px] dark:shadow-indigo-300 dark:outline-indigo-300"
           src="/profile.jpg"
           alt="Picture of me"
         />
