@@ -18,9 +18,9 @@ function Header() {
               Doesn't even need /# because Next sees it as a different page. */}
               <NavLink target="/">Home</NavLink>
             </li>
-            <li>
+            {/*<li>
               <NavLink target="/skills/">Skills</NavLink>
-            </li>
+            </li>*/}
             <li>
               <NavLink target="/blog/" exact={false}>
                 Blog
