@@ -5,7 +5,7 @@ type Props = {
 };
 
 function SkillIcon({ children, background }: PropsWithChildren<Props>) {
-  const lightBackground = "bg-slate-400/50";
+  const lightBackground = "bg-slate-400";
   const darkBackground = "dark:bg-slate-200";
   const darkReset = "dark:bg-transparent";
 
@@ -23,7 +23,9 @@ function SkillIcon({ children, background }: PropsWithChildren<Props>) {
   }
 
   return (
-    <div className={`rounded-xl p-1 *:size-12 ${backgroundClass}`.trim()}>
+    <div
+      className={`rounded-xl p-1 transition *:size-12 hover:scale-120 hover:drop-shadow-[0px_0px_4px] ${backgroundClass}`.trim()}
+    >
       {children}
     </div>
   );

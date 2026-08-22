@@ -33,98 +33,121 @@ function SkillsPage() {
   return (
     <>
       <div className="grid grid-flow-col-dense gap-4">
-        <div className="flex w-fit flex-wrap place-content-center gap-4 rounded-3xl border-3 border-blue-400 p-4 dark:border-slate-400">
-          <SkillIcon>
-            <Javascript />
-          </SkillIcon>
-          <SkillIcon>
-            <TypescriptIcon />
-          </SkillIcon>
-          <SkillIcon>
-            <_React />
-          </SkillIcon>
-          <SkillIcon>
-            <NextjsIcon />
-          </SkillIcon>
-          <SkillIcon>
-            <SvelteIcon />
-          </SkillIcon>
-          <SkillIcon>
-            <img
-              src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/blazor/blazor-original.svg"
-              alt="Blazor"
-            />
-          </SkillIcon>
-          <SkillIcon>
-            <TailwindIcon />
-          </SkillIcon>
-          <SkillIcon>
-            <Bootstrap />
-          </SkillIcon>
-          <SkillIcon>
-            <Vitest />
-          </SkillIcon>
-          <SkillIcon>
-            <Playwright />
-          </SkillIcon>
+        <div className="flex flex-col gap-2 rounded-3xl border-3 border-blue-400 px-4 pt-2 pb-4 shadow-sm shadow-blue-400 dark:border-indigo-300 dark:shadow-indigo-300">
+          <p className="text-sm text-blue-400 dark:text-indigo-300">Frontend</p>
+          <div className="flex w-fit flex-wrap place-content-center gap-4 *:drop-shadow-blue-400 *:dark:drop-shadow-indigo-300">
+            <SkillIcon>
+              <Javascript />
+            </SkillIcon>
+            <SkillIcon>
+              <TypescriptIcon />
+            </SkillIcon>
+            <SkillIcon>
+              <_React />
+            </SkillIcon>
+            <SkillIcon>
+              <NextjsIcon />
+            </SkillIcon>
+            <SkillIcon>
+              <SvelteIcon />
+            </SkillIcon>
+            <SkillIcon>
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/blazor/blazor-original.svg"
+                alt="Blazor"
+              />
+            </SkillIcon>
+            <SkillIcon>
+              <TailwindIcon />
+            </SkillIcon>
+            <SkillIcon>
+              <Bootstrap />
+            </SkillIcon>
+            <SkillIcon>
+              <Vitest />
+            </SkillIcon>
+            <SkillIcon>
+              <Playwright />
+            </SkillIcon>
+          </div>
         </div>
-        <div className="flex w-fit flex-wrap place-content-center gap-4 rounded-3xl border-3 border-red-400 p-4 dark:border-red-400">
-          <SkillIcon background="dark">
-            <Java />
-          </SkillIcon>
-          <SkillIcon>
-            <SpringIcon />
-          </SkillIcon>
-          <SkillIcon>
-            <CSharp />
-          </SkillIcon>
-          <SkillIcon>
-            <Dotnet />
-          </SkillIcon>
-          <SkillIcon>
-            <Python />
-          </SkillIcon>
-          <SkillIcon>
-            <Numpy />
-          </SkillIcon>
-          <SkillIcon background="dark">
-            <PandasIcon />
-          </SkillIcon>
-          <SkillIcon background="dark">
-            <Jupyter />
-          </SkillIcon>
-          <SkillIcon>
-            <PhpAlt />
-          </SkillIcon>
-          <SkillIcon>
-            <BashIcon />
-          </SkillIcon>
+
+        <div className="flex flex-col gap-2 rounded-3xl border-3 border-red-400 px-4 pt-2 pb-4 shadow-sm shadow-red-400">
+          <p className="text-sm text-red-400">Backend</p>
+          <div className="flex w-fit flex-wrap place-content-center gap-4 *:drop-shadow-red-400 dark:border-red-400">
+            <SkillIcon background="dark">
+              <Java />
+            </SkillIcon>
+            <SkillIcon>
+              <SpringIcon />
+            </SkillIcon>
+            <SkillIcon>
+              <CSharp />
+            </SkillIcon>
+            <SkillIcon>
+              <Dotnet />
+            </SkillIcon>
+            <SkillIcon>
+              <Python />
+            </SkillIcon>
+            <SkillIcon>
+              <Numpy />
+            </SkillIcon>
+            <SkillIcon background="dark">
+              <PandasIcon />
+            </SkillIcon>
+            <SkillIcon background="dark">
+              <Jupyter />
+            </SkillIcon>
+            <SkillIcon>
+              <PhpAlt />
+            </SkillIcon>
+            <SkillIcon>
+              <BashIcon />
+            </SkillIcon>
+            <SkillIcon>
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/powershell/powershell-original.svg"
+                alt="PowerShell"
+              />
+            </SkillIcon>
+          </div>
         </div>
-        <div className="flex w-fit flex-wrap place-content-center gap-4 rounded-3xl border-3 border-purple-500 p-4 dark:border-purple-500">
-          <SkillIcon>
-            <Postgresql />
-          </SkillIcon>
-          <SkillIcon background="light">
-            <img
-              src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/microsoftsqlserver/microsoftsqlserver-original.svg"
-              alt="SQL Server"
-            />
-          </SkillIcon>
-          <SkillIcon background="dark">
-            <Mysql />
-          </SkillIcon>
-          <SkillIcon>
-            <RedisIcon />
-          </SkillIcon>
-          <SkillIcon>
-            <MongodbIcon />
-          </SkillIcon>
-          <SkillIcon background="dark">
-            <Neo4j />
-          </SkillIcon>
-          <SkillIcon>
-            <Hibernate />
-          </SkillIcon>
+
+        <div className="flex flex-col gap-2 rounded-3xl border-3 border-purple-500 px-4 pt-2 pb-4 shadow-sm shadow-purple-500">
+          <p className="text-sm text-purple-500">Databases</p>
+          <div className="flex h-full w-fit flex-wrap place-content-center gap-4 *:drop-shadow-purple-500 dark:border-purple-500">
+            <SkillIcon>
+              <Postgresql />
+            </SkillIcon>
+            <SkillIcon background="light">
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/microsoftsqlserver/microsoftsqlserver-original.svg"
+                alt="SQL Server"
+              />
+            </SkillIcon>
+            <SkillIcon background="dark">
+              <Mysql />
+            </SkillIcon>
+            <SkillIcon>
+              <RedisIcon />
+            </SkillIcon>
+            <SkillIcon>
+              <MongodbIcon />
+            </SkillIcon>
+            <SkillIcon background="dark">
+              <Neo4j />
+            </SkillIcon>
+            <SkillIcon>
+              <Hibernate />
+            </SkillIcon>
+            <SkillIcon>
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/entityframeworkcore/entityframeworkcore-original.svg"
+                alt="Entity Framework"
+              />
+            </SkillIcon>
+          </div>
         </div>
       </div>
     </>
