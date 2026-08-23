@@ -14,7 +14,7 @@ function SkillContainer({
 }: PropsWithChildren<Props>) {
   return (
     <div
-      className={`flex flex-col gap-2 rounded-3xl border-3 border-(--color) bg-slate-200 px-4 pt-2 pb-4 shadow-(--color) shadow-sm dark:bg-slate-800/75 ${dark ? "dark:border-(--dark) dark:shadow-(--dark)" : ""}`}
+      className={`flex flex-col gap-2 rounded-3xl border-3 border-(--color) bg-slate-200 px-4 pt-2 pb-4 shadow-sm shadow-(color:--color) dark:bg-slate-800/75 ${dark ? "dark:border-(--dark) dark:shadow-(color:--dark)" : ""}`}
       style={style}
     >
       <p
