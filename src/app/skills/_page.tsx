@@ -54,7 +54,6 @@ function SkillsPage() {
       <div className="grid grid-cols-2 gap-4">
         <SkillContainer
           title={"Frontend"}
-          dark={true}
           style={{
             "--color": "var(--color-blue-400)",
             "--dark": "var(--color-indigo-300)",
@@ -97,7 +96,6 @@ function SkillsPage() {
 
         <SkillContainer
           title={"Backend"}
-          dark={true}
           style={{
             "--color": "var(--color-red-500)",
             "--dark": "var(--color-red-400)",
@@ -152,7 +150,6 @@ function SkillsPage() {
 
         <SkillContainer
           title={"Databases"}
-          dark={true}
           style={{
             "--color": "var(--color-purple-500)",
             "--dark": "var(--color-purple-400)",
@@ -198,7 +195,6 @@ function SkillsPage() {
 
         <SkillContainer
           title={"Tools"}
-          dark={true}
           style={{
             "--color": "var(--color-green-500)",
             "--dark": "var(--color-green-400)",
