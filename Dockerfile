@@ -54,6 +54,8 @@ FROM lipanski/docker-static-website:2.6.0 AS final
 
 # Copy your static files
 COPY --from=build /usr/src/app/out .
+# Error page overrides must go in the main config at /etc/
+COPY httpd.conf /etc/
 
 # Expose the port that the application listens on.
 EXPOSE 3000
