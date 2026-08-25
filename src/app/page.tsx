@@ -20,6 +20,12 @@ export default function Home() {
               am
             </span>{" "}
             ===
+            <span
+              aria-hidden
+              className={"animate-blink bg-current motion-reduce:hidden"}
+            >
+              0
+            </span>
           </code>
         </pre>
         {/* 4xl - 6xl font size */}
