@@ -17,6 +17,16 @@
       opacity: 0;
     }
   }
+
+  --animate-rainbow: rainbow 1s linear infinite;
+  @keyframes rainbow {
+    to, from {
+      text-decoration-color: var(--color-blue-500);
+    }
+    50% {
+      text-decoration-color: var(--color-purple-500);
+    }
+  }
 }
 
 @layer base {
