@@ -25,7 +25,7 @@ function SkillIcon({ children, background }: PropsWithChildren<Props>) {
   return (
     <>
       <button
-        className={`rounded-xl p-1 transition *:size-12 hover:drop-shadow-[0px_0px_4px] focus:drop-shadow-[0px_0px_4px] motion-safe:hover:scale-120 motion-safe:focus:scale-120 ${backgroundClass}`.trim()}
+        className={`rounded-xl p-1 transition-[scale,filter] *:size-12 hover:drop-shadow-[0px_0px_4px] focus:drop-shadow-[0px_0px_4px] motion-safe:hover:scale-120 motion-safe:focus:scale-120 ${backgroundClass}`.trim()}
       >
         {children}
       </button>
