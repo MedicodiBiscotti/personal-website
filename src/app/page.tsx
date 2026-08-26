@@ -1,4 +1,5 @@
 import Code from "@/components/Code";
+import FancyLink from "@/components/FancyLink";
 
 export default function Home() {
   return (
@@ -53,7 +54,13 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <p className="mt-8 text-xl md:text-center">
+      <p className={"mt-8 text-lg"}>
+        As a full-stack developer, I work with all parts of an application;
+        databases, APIs, frontend web UIs, and DevOps tools. See this{" "}
+        <FancyLink href={"/skills/"}>overview of skills</FancyLink> for more
+        details.
+      </p>
+      <p className="mt-8 text-lg md:text-center">
         Welcome to my little corner of the internet, and...
       </p>
       <Code
