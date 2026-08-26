@@ -23,11 +23,13 @@ function SkillIcon({ children, background }: PropsWithChildren<Props>) {
   }
 
   return (
-    <div
-      className={`rounded-xl p-1 transition *:size-12 hover:scale-120 hover:drop-shadow-[0px_0px_4px] ${backgroundClass}`.trim()}
-    >
-      {children}
-    </div>
+    <>
+      <button
+        className={`rounded-xl p-1 transition *:size-12 hover:drop-shadow-[0px_0px_4px] focus:drop-shadow-[0px_0px_4px] motion-safe:hover:scale-120 motion-safe:focus:scale-120 ${backgroundClass}`.trim()}
+      >
+        {children}
+      </button>
+    </>
   );
 }
 
