@@ -45,13 +45,60 @@ import {
   Vitest,
 } from "@dev.icons/react";
 import { GithubIcon, KafkaIcon, LinuxTux, PhpAlt } from "@dev.icons/react/mono";
+import Link from "next/link";
 
 function SkillsPage() {
   // Uses both https://devicons.io/ and https://devicon.dev/ for icons.
   // Use background or a monochrome icon (stroke = current) if the full color variant doesn't fit the site theme.
   return (
     <>
-      <div className="grid grid-cols-2 gap-4">
+      <h1 className="text-center text-[clamp(2.25rem,calc(1.705rem+2.727vw),3.75rem)] leading-none font-bold">
+        Skills
+      </h1>
+      <div className={"mt-6 [&_*+*]:mt-[1.2em]"}>
+        <p>
+          Hello, I'm a full-stack software developer, meaning I work with all
+          parts of an application from the database and the backend to the UI in
+          the frontend and everything in between including APIs, DevOps and CLI
+          tools.
+        </p>
+        <p>
+          As a backend developer, I have extensive experience working with Java
+          and the Spring Boot framework as well as C# and .NET. I also work with
+          the most popular SQL and No-SQL databases.
+        </p>
+        <p>
+          As far as frontend goes, I mostly have experience with React. Either
+          vanilla React or using a meta framework like NextJS, but I have also
+          used Blazor for .NET applications. I also have some experience using
+          Svelte, which I'm currently developing a game in.
+        </p>
+        <p>
+          I have experience working with Docker to containerize applications so
+          they can run anywhere. In fact, this website runs in a{" "}
+          <Link className={"underline"} href={"/blog/technical-details/"}>
+            ridiculously small Docker container
+          </Link>
+          .
+        </p>
+        <p>
+          I love Git and have used all the major Git hosting providers (except
+          GitLab, I'm coming for you one day) including their CI/CD pipelines to
+          automate testing and deployment workflows.
+        </p>
+        <p>
+          Additionally, I have some experience working with data science tools
+          in Python, such as NumPy and Pandas, as well as creating NLP models
+          with machine learning.
+        </p>
+        <p>
+          I enjoy working with the terminal and have written CLI tools in
+          Python, Bash and even Java. When I feel the inclination to make
+          another CLI tool, I might try making it in Go because I am interested
+          in learning that language.
+        </p>
+      </div>
+      <div className="mt-6 grid grid-cols-2 gap-4">
         <SkillContainer
           title={"Frontend"}
           style={{
