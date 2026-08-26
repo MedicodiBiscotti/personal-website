@@ -98,7 +98,7 @@ function SkillsPage() {
           in learning that language.
         </p>
       </div>
-      <div className="mt-6 grid grid-cols-2 gap-4">
+      <div className="mt-6 grid gap-4 md:grid-cols-2">
         <SkillContainer
           title={"Frontend"}
           style={{
