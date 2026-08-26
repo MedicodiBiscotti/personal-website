@@ -3,7 +3,7 @@ import FancyLink from "@/components/FancyLink";
 
 export default function Home() {
   return (
-    <div className="mt-16">
+    <div className="mt-8 sm:mt-16">
       {/*
         hljs adds semantic classes which are styled from themes.
         I only want a dark theme; even in light mode, code is on a dark background.
@@ -46,7 +46,7 @@ export default function Home() {
             I'm a software developer in the Copenhagen metropolitan area.
           </h2>
           <div className="flex grow items-center">
-            <p className="text-xl">
+            <p className="text-lg md:text-xl">
               From simple CLI tools to distributed systems of microservices, I
               can help you build it, whether we're making something new or
               modernising legacy software.
