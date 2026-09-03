@@ -4,7 +4,10 @@ type Props = {
   background?: "light" | "dark" | "both";
 };
 
-function SkillIcon({ children, background }: PropsWithChildren<Props>) {
+export default function SkillIcon({
+  children,
+  background,
+}: PropsWithChildren<Props>) {
   const lightBackground = "bg-slate-400";
   const darkBackground = "dark:bg-slate-200";
   const darkReset = "dark:bg-transparent";
@@ -32,5 +35,3 @@ function SkillIcon({ children, background }: PropsWithChildren<Props>) {
     </>
   );
 }
-
-export default SkillIcon;

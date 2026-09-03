@@ -4,7 +4,7 @@ export const metadata: Metadata = {
   title: "404 Page not found",
 };
 
-function NotFound() {
+export default function NotFound() {
   return (
     <div className={"flex h-full flex-col items-center justify-center gap-4"}>
       <div className={"grid items-center *:px-8 md:grid-cols-2 md:divide-x"}>
@@ -17,5 +17,3 @@ function NotFound() {
     </div>
   );
 }
-
-export default NotFound;

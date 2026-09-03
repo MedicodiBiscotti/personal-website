@@ -1,9 +1,8 @@
 import NavLink from "@/components/NavLink";
 import ThemeSwitch from "@/components/ThemeSwitch";
 import Link from "next/link";
-import React from "react";
 
-function Header() {
+export default function Header() {
   return (
     <header
       id="top"
@@ -41,5 +40,3 @@ function Header() {
     </header>
   );
 }
-
-export default Header;

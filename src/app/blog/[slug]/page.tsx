@@ -33,11 +33,11 @@ function PostHeader({ file }: { file: VFile }) {
   return (
     <header>
       {/* 4xl - 6xl. Reaches 4xl at sm (640px) */}
-      <h1 className="mx-auto w-fit text-[clamp(2.25rem,calc(0.536rem+4.286vw),3.75rem)] font-extrabold leading-none">
+      <h1 className="mx-auto w-fit text-[clamp(2.25rem,calc(0.536rem+4.286vw),3.75rem)] leading-none font-extrabold">
         {matter?.title ?? meta?.title}
       </h1>
       {/* Match width of article (65ch from prose) */}
-      <div className="mx-auto mt-2 grid max-w-[65ch] grid-cols-[repeat(2,max-content)] justify-between tabular-nums text-neutral-500 dark:text-neutral-400">
+      <div className="mx-auto mt-2 grid max-w-[65ch] grid-cols-[repeat(2,max-content)] justify-between text-neutral-500 tabular-nums dark:text-neutral-400">
         {/* Align dates on top of each other */}
         <div className="grid grid-cols-[repeat(2,max-content)] justify-between gap-2">
           <span>Posted:</span>
@@ -66,7 +66,7 @@ export default async function Post({ params }: { params: Promise<PostProps> }) {
     <article>
       <PostHeader file={file} />
       <div
-        className="prose mx-auto mt-8 dark:prose-invert"
+        className="prose dark:prose-invert mx-auto mt-8"
         dangerouslySetInnerHTML={{ __html: file.value }}
       />
     </article>

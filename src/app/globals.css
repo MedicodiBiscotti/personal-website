@@ -20,7 +20,8 @@
 
   --animate-rainbow: rainbow 1s linear infinite;
   @keyframes rainbow {
-    to, from {
+    to,
+    from {
       text-decoration-color: var(--color-blue-500);
     }
     50% {

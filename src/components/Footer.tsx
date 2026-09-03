@@ -1,7 +1,6 @@
 import { EnvelopeIcon } from "@heroicons/react/24/outline";
-import React from "react";
 
-function Footer() {
+export default function Footer() {
   return (
     <footer className="bg-neutral-100 py-2 text-center dark:bg-zinc-900">
       <div className="mx-auto w-full max-w-4xl px-4 sm:w-4/5">
@@ -56,5 +55,3 @@ function Footer() {
     </footer>
   );
 }
-
-export default Footer;

@@ -5,11 +5,11 @@ import {
   MoonIcon,
   SunIcon,
 } from "@heroicons/react/24/outline";
-import React, { useLayoutEffect, useState } from "react";
+import { useLayoutEffect, useState } from "react";
 
 type Theme = "light" | "dark" | null;
 
-function ThemeSwitch() {
+export default function ThemeSwitch() {
   const [theme, setTheme] = useState<Theme>();
 
   useLayoutEffect(() => {
@@ -52,5 +52,3 @@ function ThemeSwitch() {
     </div>
   );
 }
-
-export default ThemeSwitch;

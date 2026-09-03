@@ -47,7 +47,7 @@ import {
 import { GithubIcon, KafkaIcon, LinuxTux, PhpAlt } from "@dev.icons/react/mono";
 import Link from "next/link";
 
-function SkillsPage() {
+export default function SkillsPage() {
   // Uses both https://devicons.io/ and https://devicon.dev/ for icons.
   // Use background or a monochrome icon (stroke = current) if the full color variant doesn't fit the site theme.
   return (
@@ -312,5 +312,3 @@ function SkillsPage() {
     </>
   );
 }
-
-export default SkillsPage;

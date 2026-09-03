@@ -7,7 +7,7 @@ type CodeProps = {
   className?: string;
 };
 
-function Code({ code, language, className }: CodeProps) {
+export default function Code({ code, language, className }: CodeProps) {
   return (
     <pre
       className={`my-6 rounded-md bg-slate-800 px-4 py-3 dark:bg-black/50 ${className}`}
@@ -21,5 +21,3 @@ function Code({ code, language, className }: CodeProps) {
     </pre>
   );
 }
-
-export default Code;

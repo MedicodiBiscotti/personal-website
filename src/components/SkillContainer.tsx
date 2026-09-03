@@ -5,7 +5,11 @@ type Props = {
   style: CSSProperties & { "--color": string; "--dark"?: string };
 };
 
-function SkillContainer({ children, title, style }: PropsWithChildren<Props>) {
+export default function SkillContainer({
+  children,
+  title,
+  style,
+}: PropsWithChildren<Props>) {
   const dark = Object.hasOwn(style, "--dark");
   return (
     <div
@@ -25,5 +29,3 @@ function SkillContainer({ children, title, style }: PropsWithChildren<Props>) {
     </div>
   );
 }
-
-export default SkillContainer;
