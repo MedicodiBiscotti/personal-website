@@ -1,6 +1,13 @@
 "use client";
 
-import { FocusEvent, MouseEvent, PropsWithChildren } from "react";
+import {
+  Children,
+  cloneElement,
+  FocusEvent,
+  isValidElement,
+  MouseEvent,
+  PropsWithChildren,
+} from "react";
 
 type Props = {
   id: string;
@@ -31,6 +38,15 @@ export default function SkillIcon({
       break;
   }
 
+  // We set ARIA label on the button, so we apply hidden to the children which are all just images.
+
+  const hiddenChildren = Children.map(children, (child) =>
+    isValidElement(child)
+      ? // @ts-ignore
+        cloneElement(child, { "aria-hidden": true })
+      : child,
+  );
+
   // interestfor is not supported in Firefox yet, so we use JS mouse events to open on hover.
   // We can also target a touch and mouse differently using media queries.
   function showPopover(
@@ -52,7 +68,7 @@ export default function SkillIcon({
         onMouseEnter={showPopover}
         onFocus={showPopover}
       >
-        {children}
+        {hiddenChildren}
       </button>
       <div
         id={`popover-${id}`}
