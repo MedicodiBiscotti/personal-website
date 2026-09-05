@@ -10,8 +10,11 @@ function PostCard({ post }: PostCardProps) {
   const { matter, meta } = post.data;
   return (
     /* Can remove `` when matter undefined gets fixed. */
-    <Link href={`${matter?.slug}`}>
-      <div className="size-full rounded-xl bg-slate-200 p-4 shadow-sm transition hover:scale-105 dark:bg-slate-800/75">
+    <Link
+      href={`${matter?.slug}`}
+      className="transition-[scale] motion-safe:hover:scale-105 motion-safe:focus:scale-105"
+    >
+      <div className="size-full rounded-xl bg-slate-200 p-4 shadow-sm dark:bg-slate-800/75">
         <h2 className="text-xl leading-none font-bold text-balance">
           {matter?.title ?? meta?.title}
         </h2>

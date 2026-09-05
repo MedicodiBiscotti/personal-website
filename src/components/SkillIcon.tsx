@@ -39,7 +39,6 @@ export default function SkillIcon({
   }
 
   // We set ARIA label on the button, so we apply hidden to the children which are all just images.
-
   const hiddenChildren = Children.map(children, (child) =>
     isValidElement(child)
       ? // @ts-ignore
@@ -63,7 +62,7 @@ export default function SkillIcon({
         aria-label={description}
         id={id}
         popoverTarget={`popover-${id}`}
-        popoverTargetAction={"show"}
+        popoverTargetAction="show"
         className={`rounded-xl p-1 transition-[scale,filter] *:size-12 hover:drop-shadow-[0px_0px_4px] focus:drop-shadow-[0px_0px_4px] motion-safe:hover:scale-120 motion-safe:focus:scale-120 ${backgroundClass}`.trim()}
         onMouseEnter={showPopover}
         onFocus={showPopover}
@@ -72,10 +71,8 @@ export default function SkillIcon({
       </button>
       <div
         id={`popover-${id}`}
-        popover={"auto"}
-        className={
-          "w-max rounded-3xl border-2 border-(--color) bg-slate-100 px-4 py-2 text-current [position-area:start_center] dark:border-(--dark) dark:bg-slate-900"
-        }
+        popover="auto"
+        className="w-max rounded-3xl border-2 border-(--color) bg-slate-100 px-4 py-2 text-current [position-area:start_center] dark:border-(--dark) dark:bg-slate-900"
       >
         {description}
       </div>
