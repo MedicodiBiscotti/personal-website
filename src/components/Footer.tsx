@@ -3,7 +3,7 @@ import { EnvelopeIcon } from "@heroicons/react/24/outline";
 export default function Footer() {
   return (
     <footer className="bg-neutral-100 py-2 text-center dark:bg-zinc-900">
-      <div className="mx-auto w-full max-w-4xl px-4 sm:w-4/5">
+      <div className="mx-auto w-full max-w-4xl px-4 sm:w-9/10">
         <div
           id="contact"
           className="mt-2 grid grid-cols-[repeat(auto-fit,215px)] justify-center gap-x-6 gap-y-2 text-start"
