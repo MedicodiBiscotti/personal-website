@@ -1,6 +1,5 @@
 import NavLink from "@/components/NavLink";
 import ThemeSwitch from "@/components/ThemeSwitch";
-import Link from "next/link";
 
 export default function Header() {
   return (
@@ -25,15 +24,12 @@ export default function Header() {
                 Blog
               </NavLink>
             </li>
+            <li>
+              <NavLink target="#contact">Contact</NavLink>
+            </li>
           </ul>
         </nav>
         <div className="flex items-center gap-3">
-          <Link
-            className="inline-block h-full content-center px-3"
-            href="#contact"
-          >
-            Contact
-          </Link>
           <ThemeSwitch />
         </div>
       </div>
