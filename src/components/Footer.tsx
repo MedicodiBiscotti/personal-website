@@ -50,7 +50,7 @@ export default function Footer() {
             <span className="underline">MedicodiBiscotti</span>
           </a>
         </div>
-        <small className="mx-auto">&copy; 2026 Kasper Overgaard Dahl</small>
+        <small>&copy; 2026 Kasper Overgaard Dahl</small>
       </div>
     </footer>
   );

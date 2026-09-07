@@ -36,7 +36,7 @@ export default function Home() {
       </div>
       <div className="mt-6 grid gap-8 md:grid-cols-[35%_1fr]">
         <img
-          className="mx-auto block h-80 rounded-4xl object-cover object-top p-1 shadow-[1px_3px_6px_1px] shadow-blue-400 outline-3 outline-blue-400 transition-all duration-300 hover:scale-102 hover:shadow-[2px_4px_8px_2px] dark:shadow-indigo-300 dark:outline-indigo-300"
+          className="mx-auto block h-80 rounded-4xl object-cover object-top p-1 shadow-[1px_3px_6px_1px] shadow-blue-400 outline-3 outline-blue-400 transition-all duration-300 hover:shadow-[2px_4px_8px_2px] motion-safe:hover:scale-102 dark:shadow-indigo-300 dark:outline-indigo-300"
           src="/profile.jpg"
           alt="Picture of me"
         />

@@ -51,6 +51,7 @@ export default function SkillIcon({
   function showPopover(
     event: MouseEvent<HTMLButtonElement> | FocusEvent<HTMLButtonElement>,
   ) {
+    // Could use either getElementById, React useRef, or popoverTargetElement.
     (event.currentTarget.popoverTargetElement as HTMLElement).showPopover({
       source: event.currentTarget,
     });
