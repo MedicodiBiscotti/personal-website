@@ -1,5 +1,6 @@
 "use client";
 
+import useMediaQuery from "@/hooks/useMediaQuery";
 import {
   ComputerDesktopIcon,
   MoonIcon,
@@ -11,8 +12,15 @@ type Theme = "light" | "dark" | null;
 
 export default function ThemeSwitch() {
   const [theme, setTheme] = useState<Theme>();
+  const prefersDark = useMediaQuery("(prefers-color-scheme: dark)");
+  const prefersTheme = prefersDark ? "dark" : "light";
+
+  if (theme === null) {
+    document.documentElement.dataset.theme = prefersTheme;
+  }
 
   useLayoutEffect(() => {
+    // Initialize theme from local storage
     setTheme(localStorage.getItem("theme") as Theme);
   }, []);
 
@@ -22,9 +30,7 @@ export default function ThemeSwitch() {
       localStorage.setItem("theme", newTheme);
     } else {
       localStorage.removeItem("theme");
-      newTheme = window.matchMedia("(prefers-color-scheme: dark)").matches
-        ? "dark"
-        : "light";
+      newTheme = prefersTheme;
     }
     document.documentElement.dataset.theme = newTheme;
   }
