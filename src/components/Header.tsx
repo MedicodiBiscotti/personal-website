@@ -8,7 +8,8 @@ export default function Header() {
       id="top"
       className="fixed inset-x-0 bg-neutral-100 shadow-sm dark:bg-zinc-900"
     >
-      <div className="mx-auto flex h-10 w-full max-w-6xl items-stretch justify-between px-6 sm:w-9/10">
+      {/* The height of the header is now coming from its children, the nav links and the hamburger icon. */}
+      <div className="mx-auto flex max-w-6xl justify-between px-6 sm:w-9/10">
         <Nav>
           <li>
             {/* Can be #top to work when scrolled down normally, but makes the URL uglier.

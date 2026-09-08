@@ -28,7 +28,7 @@ export default function RootLayout({
       </head>
       <body className="grid min-h-svh scrollbar-gutter-stable grid-rows-[1fr_auto] bg-linear-to-br from-blue-100 to-slate-400 bg-fixed dark:bg-black dark:from-slate-800 dark:to-slate-900/70 dark:text-white">
         <Header />
-        <main className="mx-auto w-full max-w-6xl bg-white/25 px-[clamp(1.5rem,calc(-0.36rem+5.814vw),4rem)] pt-16 pb-4 sm:w-9/10 dark:bg-black/25">
+        <main className="mx-auto max-w-6xl bg-white/25 px-[clamp(1.5rem,calc(-0.36rem+5.814vw),4rem)] pt-16 pb-4 sm:w-9/10 dark:bg-black/25">
           {children}
         </main>
         <Footer />

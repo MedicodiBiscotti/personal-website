@@ -23,7 +23,7 @@ export default function NavLink({
 
   return (
     <Link
-      className={`inline-block h-full content-center px-3 transition duration-200 ${hoverClass} ${active ? activeClass : ""}`}
+      className={`inline-block h-10 w-full content-center px-6 transition duration-200 sm:px-3 ${hoverClass} ${active ? activeClass : ""}`}
       href={target}
     >
       {children}

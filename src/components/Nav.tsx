@@ -5,6 +5,7 @@ import { MouseEvent, PropsWithChildren, useRef } from "react";
 
 /**
  * Wrapper component for navigation for both desktop and mobile views. Reuses children. Unfortunately, this disconnects the ul and li as ul needs to be flex.
+ * NavLinks also have responsive styling in their file.
  */
 export default function Nav({ children }: PropsWithChildren) {
   const hamburger = useRef(null);
@@ -19,10 +20,10 @@ export default function Nav({ children }: PropsWithChildren) {
 
   return (
     <nav>
-      <div className="hidden h-full sm:block">
-        <ul className="flex h-full">{children}</ul>
+      <div className="hidden sm:block">
+        <ul className="flex">{children}</ul>
       </div>
-      <div className="flex h-full items-center sm:hidden">
+      <div className="block sm:hidden">
         <button
           // @ts-ignore
           command="show-modal"
@@ -30,6 +31,7 @@ export default function Nav({ children }: PropsWithChildren) {
           aria-controls="mobile-nav"
           aria-expanded={false}
           aria-label="Open navigation"
+          className="py-1"
         >
           <Bars3Icon className="size-8" />
         </button>
@@ -39,7 +41,7 @@ export default function Nav({ children }: PropsWithChildren) {
           id="mobile-nav"
           aria-label="Navigation"
           closedby="any"
-          className="-translate-x-full bg-neutral-100 text-current transition-[translate,display,overlay] transition-discrete duration-700 *:px-6 backdrop:bg-transparent backdrop:transition-[background-color,display,overlay] backdrop:transition-discrete backdrop:duration-700 open:translate-x-0 open:backdrop:bg-black/25 motion-reduce:duration-0 motion-reduce:backdrop:duration-0 dark:bg-zinc-900 starting:open:-translate-x-full starting:open:backdrop:bg-transparent"
+          className="min-w-36 -translate-x-full bg-neutral-100 text-current shadow-sm transition-[translate,display,overlay] transition-discrete duration-700 backdrop:bg-transparent backdrop:transition-[background-color,display,overlay] backdrop:transition-discrete backdrop:duration-700 open:translate-x-0 open:backdrop:bg-black/25 motion-reduce:duration-0 motion-reduce:backdrop:duration-0 dark:bg-zinc-900 starting:open:-translate-x-full starting:open:backdrop:bg-transparent"
           onClick={handleLinkClick}
         >
           <button
@@ -49,6 +51,7 @@ export default function Nav({ children }: PropsWithChildren) {
             aria-controls="mobile-nav"
             aria-expanded={true}
             aria-label="Close navigation"
+            className="w-full px-6 py-1"
           >
             <XMarkIcon className="size-8" />
           </button>
