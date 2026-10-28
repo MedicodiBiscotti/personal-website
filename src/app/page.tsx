@@ -40,18 +40,19 @@ export default function Home() {
           src="/profile.jpg"
           alt="Picture of me"
         />
-        <div className="flex flex-col gap-8 md:gap-0">
+        <div className="flex flex-col gap-8 md:justify-between md:gap-0">
           {/* 2xl - 3xl font size */}
           <h2 className="text-[clamp(1.50rem,calc(1.364rem+0.682vw),1.88rem)] font-bold text-black dark:text-white">
-            I'm a software developer in the Copenhagen metropolitan area.
+            Software developer in the Copenhagen metropolitan area.
           </h2>
-          <div className="flex grow items-center">
-            <p className="text-lg md:text-xl">
-              From simple CLI tools to distributed systems of microservices, I
-              can help you build it, whether we're making something new or
-              modernising legacy software.
-            </p>
-          </div>
+          <p className="text-lg md:text-2xl md:font-bold">
+            CLI tools to microservices, database to user interface, testing and
+            DevOps.
+          </p>
+          {/*<p className="text-lg md:text-2xl md:font-bold">Whatever you need.</p>*/}
+          <p className="text-lg md:text-[clamp(1.5rem,calc(1.227rem+1.364vw),2.25rem)] md:font-bold">
+            Let's build something.
+          </p>
         </div>
       </div>
       <p className={"mt-8 text-lg"}>
