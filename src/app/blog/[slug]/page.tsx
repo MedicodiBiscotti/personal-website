@@ -33,7 +33,7 @@ function PostHeader({ file }: { file: VFile }) {
   return (
     <header>
       {/* 4xl - 6xl. Reaches 4xl at sm (640px) */}
-      <h1 className="mx-auto w-fit text-[clamp(2.25rem,calc(0.536rem+4.286vw),3.75rem)] leading-none font-extrabold">
+      <h1 className="mx-auto w-fit text-[clamp(2.25rem,calc(0.536rem+4.286vw),3.75rem)] leading-none font-extrabold text-black dark:text-white">
         {matter?.title ?? meta?.title}
       </h1>
       {/* Match width of article (65ch from prose) */}

@@ -52,7 +52,7 @@ export default function SkillsPage() {
   // Use background or a monochrome icon (stroke = current) if the full color variant doesn't fit the site theme.
   return (
     <>
-      <h1 className="text-center text-[clamp(2.25rem,calc(1.705rem+2.727vw),3.75rem)] leading-none font-bold">
+      <h1 className="text-center text-[clamp(2.25rem,calc(1.705rem+2.727vw),3.75rem)] leading-none font-bold text-black dark:text-white">
         Skills
       </h1>
       <div className={"mt-6 [&_*+*]:mt-[1.2em]"}>

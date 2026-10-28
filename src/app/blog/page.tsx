@@ -15,7 +15,7 @@ function PostCard({ post }: PostCardProps) {
       className="transition-[scale] motion-safe:hover:scale-105 motion-safe:focus:scale-105"
     >
       <div className="size-full rounded-xl bg-slate-200 p-4 shadow-sm dark:bg-slate-800/75">
-        <h2 className="text-xl leading-none font-bold text-balance">
+        <h2 className="text-xl leading-none font-bold text-balance text-black dark:text-white">
           {matter?.title ?? meta?.title}
         </h2>
         <div className="mt-2 flex justify-between text-sm text-neutral-500 tabular-nums dark:text-neutral-400">
@@ -43,7 +43,7 @@ export default async function BlogPage() {
 
   return (
     <div>
-      <h1 className="text-center text-[clamp(2.25rem,calc(1.705rem+2.727vw),3.75rem)] leading-none font-bold">
+      <h1 className="text-center text-[clamp(2.25rem,calc(1.705rem+2.727vw),3.75rem)] leading-none font-bold text-black dark:text-white">
         Blog
       </h1>
       <div className="mt-6 grid grid-cols-[repeat(auto-fit,minmax(300px,1fr))] gap-8">

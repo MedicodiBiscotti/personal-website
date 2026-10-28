@@ -30,7 +30,7 @@ export default function Home() {
           </code>
         </pre>
         {/* 4xl - 6xl font size */}
-        <h1 className="text-[clamp(2.25rem,calc(1.705rem+2.727vw),3.75rem)] leading-none font-extrabold">
+        <h1 className="text-[clamp(2.25rem,calc(1.705rem+2.727vw),3.75rem)] leading-none font-extrabold text-black dark:text-white">
           Kasper Dahl
         </h1>
       </div>
@@ -42,7 +42,7 @@ export default function Home() {
         />
         <div className="flex flex-col gap-8 md:gap-0">
           {/* 2xl - 3xl font size */}
-          <h2 className="text-[clamp(1.50rem,calc(1.364rem+0.682vw),1.88rem)] font-bold">
+          <h2 className="text-[clamp(1.50rem,calc(1.364rem+0.682vw),1.88rem)] font-bold text-black dark:text-white">
             I'm a software developer in the Copenhagen metropolitan area.
           </h2>
           <div className="flex grow items-center">
