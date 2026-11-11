@@ -14,7 +14,13 @@ type Props = {
   name: string;
   description?: string;
   background?: "light" | "dark" | "both";
+  className?: string;
 };
+
+/* className to override troublesome styles like unwanted ligatures.
+   Could potentially refactor into separate components like icon and popover,
+   and then use children in the popover to allow for the expressiveness of HTML
+   to format the text content instead of a string property. */
 
 export default function SkillIcon({
   children,
@@ -22,6 +28,7 @@ export default function SkillIcon({
   name,
   description,
   background,
+  className,
 }: PropsWithChildren<Props>) {
   const lightBackground = "bg-slate-400";
   const darkBackground = "dark:bg-slate-200";
@@ -87,7 +94,7 @@ export default function SkillIcon({
       <div
         id={`popover-${id}`}
         popover="auto"
-        className="w-max rounded-3xl border-2 border-(--color) bg-slate-100 px-4 py-2 text-current [position-area:start_center] dark:border-(--dark) dark:bg-slate-900"
+        className={`w-max max-w-lg rounded-3xl border-2 border-(--color) bg-slate-100 px-4 py-2 text-current [position-area:start_center] dark:border-(--dark) dark:bg-slate-900 ${className}`}
         onMouseEnter={showPopover}
         onMouseLeave={hidePopover}
       >
