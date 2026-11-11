@@ -11,13 +11,15 @@ import {
 
 type Props = {
   id: string;
-  description: string;
+  name: string;
+  description?: string;
   background?: "light" | "dark" | "both";
 };
 
 export default function SkillIcon({
   children,
   id,
+  name,
   description,
   background,
 }: PropsWithChildren<Props>) {
@@ -60,7 +62,7 @@ export default function SkillIcon({
   return (
     <>
       <button
-        aria-label={description}
+        aria-label={name}
         id={id}
         popoverTarget={`popover-${id}`}
         popoverTargetAction="show"
@@ -75,7 +77,8 @@ export default function SkillIcon({
         popover="auto"
         className="w-max rounded-3xl border-2 border-(--color) bg-slate-100 px-4 py-2 text-current [position-area:start_center] dark:border-(--dark) dark:bg-slate-900"
       >
-        {description}
+        <p className="font-bold">{name}</p>
+        <p>{description}</p>
       </div>
     </>
   );

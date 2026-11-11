@@ -106,37 +106,37 @@ export default function SkillsPage() {
             "--dark": "var(--color-indigo-300)",
           }}
         >
-          <SkillIcon id="javascript" description="JavaScript">
+          <SkillIcon id="javascript" name="JavaScript">
             <Javascript />
           </SkillIcon>
-          <SkillIcon id="typescript" description="TypeScript">
+          <SkillIcon id="typescript" name="TypeScript">
             <TypescriptIcon />
           </SkillIcon>
-          <SkillIcon id="react" description="React">
+          <SkillIcon id="react" name="React">
             <_React />
           </SkillIcon>
-          <SkillIcon id="nextjs" description="Next.js">
+          <SkillIcon id="nextjs" name="Next.js">
             <NextjsIcon />
           </SkillIcon>
-          <SkillIcon id="svelte" description="Svelte">
+          <SkillIcon id="svelte" name="Svelte">
             <SvelteIcon />
           </SkillIcon>
-          <SkillIcon id="blazor" description="Blazor">
+          <SkillIcon id="blazor" name="Blazor">
             <img
               src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/blazor/blazor-original.svg"
               alt="Blazor"
             />
           </SkillIcon>
-          <SkillIcon id="tailwind" description="Tailwind">
+          <SkillIcon id="tailwind" name="Tailwind">
             <TailwindIcon />
           </SkillIcon>
-          <SkillIcon id="bootstrap" description="Bootstrap">
+          <SkillIcon id="bootstrap" name="Bootstrap">
             <Bootstrap />
           </SkillIcon>
-          <SkillIcon id="vitest" description="Vitest">
+          <SkillIcon id="vitest" name="Vitest">
             <Vitest />
           </SkillIcon>
-          <SkillIcon id="playwright" description="Playwright">
+          <SkillIcon id="playwright" name="Playwright">
             <Playwright />
           </SkillIcon>
         </SkillContainer>
@@ -148,49 +148,49 @@ export default function SkillsPage() {
             "--dark": "var(--color-red-400)",
           }}
         >
-          <SkillIcon id="java" description="Java" background="dark">
+          <SkillIcon id="java" name="Java" background="dark">
             <Java />
           </SkillIcon>
-          <SkillIcon id="spring" description="Spring">
+          <SkillIcon id="spring" name="Spring">
             <SpringIcon />
           </SkillIcon>
-          <SkillIcon id="csharp" description="C#">
+          <SkillIcon id="csharp" name="C#">
             <CSharp />
           </SkillIcon>
-          <SkillIcon id="dotnet" description=".NET">
+          <SkillIcon id="dotnet" name=".NET">
             <Dotnet />
           </SkillIcon>
-          <SkillIcon id="swagger" description="Swagger">
+          <SkillIcon id="swagger" name="Swagger">
             <Swagger />
           </SkillIcon>
-          <SkillIcon id="graphql" description="GraphQL">
+          <SkillIcon id="graphql" name="GraphQL">
             <Graphql />
           </SkillIcon>
-          <SkillIcon id="grpc" description="gRPC" background={"dark"}>
+          <SkillIcon id="grpc" name="gRPC" background={"dark"}>
             <Grpc />
           </SkillIcon>
-          <SkillIcon id="python" description="Python">
+          <SkillIcon id="python" name="Python">
             <Python />
           </SkillIcon>
-          <SkillIcon id="numpy" description="NumPy">
+          <SkillIcon id="numpy" name="NumPy">
             <Numpy />
           </SkillIcon>
-          <SkillIcon id="pandas" description="Pandas" background="dark">
+          <SkillIcon id="pandas" name="Pandas" background="dark">
             <PandasIcon />
           </SkillIcon>
-          <SkillIcon id="jupyter" description="Jupyter" background="dark">
+          <SkillIcon id="jupyter" name="Jupyter" background="dark">
             <Jupyter />
           </SkillIcon>
-          <SkillIcon id="php" description="PHP">
+          <SkillIcon id="php" name="PHP">
             <PhpAlt />
           </SkillIcon>
-          <SkillIcon id="kafka" description="Apache Kafka">
+          <SkillIcon id="kafka" name="Apache Kafka">
             <KafkaIcon />
           </SkillIcon>
-          <SkillIcon id="rabbitmq" description="RabbitMQ">
+          <SkillIcon id="rabbitmq" name="RabbitMQ">
             <RabbitmqIcon />
           </SkillIcon>
-          <SkillIcon id="camel" description="Apache Camel">
+          <SkillIcon id="camel" name="Apache Camel">
             <ApacheCamel />
           </SkillIcon>
         </SkillContainer>
@@ -202,37 +202,37 @@ export default function SkillsPage() {
             "--dark": "var(--color-purple-400)",
           }}
         >
-          <SkillIcon id="postgresql" description="PostgreSQL">
+          <SkillIcon id="postgresql" name="PostgreSQL">
             <Postgresql />
           </SkillIcon>
-          <SkillIcon id="sqlserver" description="SQL Server" background="light">
+          <SkillIcon id="sqlserver" name="SQL Server" background="light">
             <img
               src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/microsoftsqlserver/microsoftsqlserver-original.svg"
               alt="SQL Server"
             />
           </SkillIcon>
-          <SkillIcon id="mysql" description="MySQL" background="dark">
+          <SkillIcon id="mysql" name="MySQL" background="dark">
             <Mysql />
           </SkillIcon>
-          <SkillIcon id="redis" description="Redis">
+          <SkillIcon id="redis" name="Redis">
             <RedisIcon />
           </SkillIcon>
-          <SkillIcon id="mongodb" description="MongoDB">
+          <SkillIcon id="mongodb" name="MongoDB">
             <MongodbIcon />
           </SkillIcon>
-          <SkillIcon id="neo4j" description="Neo4j" background="dark">
+          <SkillIcon id="neo4j" name="Neo4j" background="dark">
             <Neo4j />
           </SkillIcon>
-          <SkillIcon id="hibernate" description="Hibernate">
+          <SkillIcon id="hibernate" name="Hibernate">
             <Hibernate />
           </SkillIcon>
-          <SkillIcon id="entityframework" description="Entity Framework">
+          <SkillIcon id="entityframework" name="Entity Framework">
             <img
               src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/entityframeworkcore/entityframeworkcore-original.svg"
               alt="Entity Framework"
             />
           </SkillIcon>
-          <SkillIcon id="flyway" description="Flyway">
+          <SkillIcon id="flyway" name="Flyway">
             <img
               src="https://upload.wikimedia.org/wikipedia/commons/e/e1/Flyway_logo.svg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original"
               alt="Flyway"
@@ -247,64 +247,64 @@ export default function SkillsPage() {
             "--dark": "var(--color-green-400)",
           }}
         >
-          <SkillIcon id="windows" description="Windows">
+          <SkillIcon id="windows" name="Windows">
             <MicrosoftWindowsIcon />
           </SkillIcon>
-          <SkillIcon id="linux" description="Linux">
+          <SkillIcon id="linux" name="Linux">
             <LinuxTux />
           </SkillIcon>
-          <SkillIcon id="git" description="Git">
+          <SkillIcon id="git" name="Git">
             <GitIcon />
           </SkillIcon>
-          <SkillIcon id="github" description="GitHub">
+          <SkillIcon id="github" name="GitHub">
             <GithubIcon />
           </SkillIcon>
-          <SkillIcon id="azure" description="Azure">
+          <SkillIcon id="azure" name="Azure">
             <MicrosoftAzure />
           </SkillIcon>
-          <SkillIcon id="bitbucket" description="Bitbucket">
+          <SkillIcon id="bitbucket" name="Bitbucket">
             <Bitbucket />
           </SkillIcon>
-          <SkillIcon id="docker" description="Docker">
+          <SkillIcon id="docker" name="Docker">
             <DockerIcon />
           </SkillIcon>
-          <SkillIcon id="terraform" description="Terraform">
+          <SkillIcon id="terraform" name="Terraform">
             <TerraformIcon />
           </SkillIcon>
-          <SkillIcon id="grafana" description="Grafana">
+          <SkillIcon id="grafana" name="Grafana">
             <Grafana />
           </SkillIcon>
-          <SkillIcon id="flyio" description="Fly.io">
+          <SkillIcon id="flyio" name="Fly.io">
             <FlyIcon />
           </SkillIcon>
-          <SkillIcon id="dependabot" description="Dependabot">
+          <SkillIcon id="dependabot" name="Dependabot">
             <Dependabot />
           </SkillIcon>
-          <SkillIcon id="bash" description="Bash">
+          <SkillIcon id="bash" name="Bash">
             <BashIcon />
           </SkillIcon>
-          <SkillIcon id="powershell" description="PowerShell">
+          <SkillIcon id="powershell" name="PowerShell">
             <img
               src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/powershell/powershell-original.svg"
               alt="PowerShell"
             />
           </SkillIcon>
-          <SkillIcon id="lua" description="Lua">
+          <SkillIcon id="lua" name="Lua">
             <Lua />
           </SkillIcon>
-          <SkillIcon id="neovim" description="Neovim">
+          <SkillIcon id="neovim" name="Neovim">
             <img
               src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/neovim/neovim-original.svg"
               alt="Neovim"
             />
           </SkillIcon>
-          <SkillIcon id="vscode" description="Visual Studio Code">
+          <SkillIcon id="vscode" name="Visual Studio Code">
             <VisualStudioCode />
           </SkillIcon>
-          <SkillIcon id="jetbrains" description="Jetbrains">
+          <SkillIcon id="jetbrains" name="Jetbrains">
             <JetbrainsIcon />
           </SkillIcon>
-          <SkillIcon id="obsidian" description="Obsidian">
+          <SkillIcon id="obsidian" name="Obsidian">
             <ObsidianIcon />
           </SkillIcon>
         </SkillContainer>
