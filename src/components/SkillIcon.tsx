@@ -7,6 +7,7 @@ import {
   isValidElement,
   MouseEvent,
   PropsWithChildren,
+  useRef,
 } from "react";
 
 type Props = {
@@ -30,6 +31,8 @@ export default function SkillIcon({
   background,
   className,
 }: PropsWithChildren<Props>) {
+  const btn = useRef(null);
+
   const lightBackground = "bg-slate-400";
   const darkBackground = "dark:bg-slate-200";
   const darkReset = "dark:bg-transparent";
@@ -57,28 +60,29 @@ export default function SkillIcon({
 
   // interestfor is not supported in Firefox yet, so we use JS mouse events to open on hover.
   // We can also target a touch and mouse differently using media queries.
-  function showPopover(
-    event: MouseEvent<HTMLElement> | FocusEvent<HTMLButtonElement>,
-  ) {
-    const btn = document.getElementById(id) as HTMLButtonElement;
+  function showPopover() {
     // Could use either getElementById, React useRef, or popoverTargetElement.
     // Event can't be used if you want the popover to stay on mouse over, because event is relative.
-    (btn.popoverTargetElement as HTMLElement).showPopover({
-      source: btn,
+    (
+      (btn.current as unknown as HTMLButtonElement)
+        .popoverTargetElement as HTMLElement
+    ).showPopover({
+      source: btn.current as unknown as HTMLButtonElement,
     });
   }
 
   // Manual hide event, so popovers are easier to dismiss now that descriptions take up more space and obscure the icons above them. Also just feels more natural.
-  function hidePopover(
-    event: MouseEvent<HTMLElement> | FocusEvent<HTMLButtonElement>,
-  ) {
-    const btn = document.getElementById(id) as HTMLButtonElement;
-    (btn.popoverTargetElement as HTMLElement).hidePopover();
+  function hidePopover() {
+    (
+      (btn.current as unknown as HTMLButtonElement)
+        .popoverTargetElement as HTMLElement
+    ).hidePopover();
   }
 
   return (
     <>
       <button
+        ref={btn}
         aria-label={name}
         id={id}
         popoverTarget={`popover-${id}`}
