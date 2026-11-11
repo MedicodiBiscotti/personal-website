@@ -70,7 +70,7 @@ export default function SkillsPage() {
         <p>
           As far as frontend goes, I mostly have experience with React. Either
           vanilla React or using a meta framework like NextJS, but I have also
-          used Blazor for .NET applications. I also have some experience using
+          used Blazor for .NET applications, and I have some experience using
           Svelte, which I'm currently developing a game in.
         </p>
         <p>
